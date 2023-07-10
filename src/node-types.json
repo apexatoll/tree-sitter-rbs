@@ -23,6 +23,10 @@
         {
           "type": "module_declaration",
           "named": true
+        },
+        {
+          "type": "type_alias_declaration",
+          "named": true
         }
       ]
     }
@@ -53,6 +57,30 @@
     }
   },
   {
+    "type": "type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "type_alias_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
     "type": "class",
     "named": false
   },
@@ -66,6 +94,14 @@
   },
   {
     "type": "module",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "untyped",
     "named": false
   }
 ]

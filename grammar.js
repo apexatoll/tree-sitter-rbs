@@ -10,7 +10,7 @@ module.exports = grammar({
       $.class_declaration,
       $.module_declaration,
       $.interface_declaration,
-      // $.type_alias_declaration,
+      $.type_alias_declaration,
       // $.constant_declaration,
       // $.global_declaration
     ),
@@ -39,6 +39,18 @@ module.exports = grammar({
       // $.module_type_parameters,
       // $.interface_members,
       "end"
+    ),
+
+    type_alias_declaration: $ => seq(
+      "type",
+      // $.alias_name,
+      // $.module_type_parameters,
+      "=",
+      $.type
+    ),
+
+    type: $ => choice(
+      "untyped"
     )
   }
 })

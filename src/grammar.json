@@ -22,6 +22,10 @@
         {
           "type": "SYMBOL",
           "name": "interface_declaration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_alias_declaration"
         }
       ]
     },
@@ -61,6 +65,32 @@
         {
           "type": "STRING",
           "value": "end"
+        }
+      ]
+    },
+    "type_alias_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "type"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
+    "type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "untyped"
         }
       ]
     }
