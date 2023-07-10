@@ -18,6 +18,10 @@
         {
           "type": "SYMBOL",
           "name": "module_declaration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "interface_declaration"
         }
       ]
     },
@@ -40,6 +44,19 @@
         {
           "type": "STRING",
           "value": "module"
+        },
+        {
+          "type": "STRING",
+          "value": "end"
+        }
+      ]
+    },
+    "interface_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "interface"
         },
         {
           "type": "STRING",

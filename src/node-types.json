@@ -17,11 +17,20 @@
           "named": true
         },
         {
+          "type": "interface_declaration",
+          "named": true
+        },
+        {
           "type": "module_declaration",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "interface_declaration",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "module_declaration",
@@ -49,6 +58,10 @@
   },
   {
     "type": "end",
+    "named": false
+  },
+  {
+    "type": "interface",
     "named": false
   },
   {
