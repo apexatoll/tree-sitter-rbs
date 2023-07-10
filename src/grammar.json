@@ -2,14 +2,31 @@
   "name": "rbs",
   "rules": {
     "program": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "declaration"
+      }
+    },
+    "declaration": {
       "type": "CHOICE",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "\\w+"
+          "type": "SYMBOL",
+          "name": "class_declaration"
+        }
+      ]
+    },
+    "class_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "class"
         },
         {
-          "type": "BLANK"
+          "type": "STRING",
+          "value": "end"
         }
       ]
     }
