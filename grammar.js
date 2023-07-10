@@ -54,6 +54,12 @@ module.exports = grammar({
     //   ":",
     //   $.type
     // ),
+    
+    // global_declaration: $ => seq(
+    //   $.global_name,
+    //   ":",
+    //   $.type
+    // ),
 
     type: $ => choice(
       "untyped"
