@@ -49,6 +49,12 @@ module.exports = grammar({
       $.type
     ),
 
+    // constant_declaration: $ => seq(
+    //   // $.constant_name,
+    //   ":",
+    //   $.type
+    // ),
+
     type: $ => choice(
       "untyped"
     )
