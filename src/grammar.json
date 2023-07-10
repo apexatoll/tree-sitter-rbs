@@ -14,6 +14,10 @@
         {
           "type": "SYMBOL",
           "name": "class_declaration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "module_declaration"
         }
       ]
     },
@@ -23,6 +27,19 @@
         {
           "type": "STRING",
           "value": "class"
+        },
+        {
+          "type": "STRING",
+          "value": "end"
+        }
+      ]
+    },
+    "module_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "module"
         },
         {
           "type": "STRING",

@@ -8,7 +8,7 @@ module.exports = grammar({
 
     declaration: $ => choice(
       $.class_declaration,
-      // $.module_declaration,
+      $.module_declaration,
       // $.interface_declaration,
       // $.type_alias_declaration,
       // $.constant_declaration,
@@ -20,6 +20,15 @@ module.exports = grammar({
       // $.class_name,
       // $.module_type_parameters,
       // < $.class_name $.type_arguments
+      // $.members,
+      "end"
+    ),
+
+    module_declaration: $ => seq(
+      "module",
+      // $.module_name,
+      // $.module_type_parameters,
+      // : $.module_self_types,
       // $.members,
       "end"
     )

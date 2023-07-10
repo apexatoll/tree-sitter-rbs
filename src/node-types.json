@@ -15,9 +15,18 @@
         {
           "type": "class_declaration",
           "named": true
+        },
+        {
+          "type": "module_declaration",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "module_declaration",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "program",
@@ -40,6 +49,10 @@
   },
   {
     "type": "end",
+    "named": false
+  },
+  {
+    "type": "module",
     "named": false
   }
 ]
