@@ -11,7 +11,7 @@ module.exports = grammar({
       $.module_declaration,
       $.interface_declaration,
       $.type_alias_declaration,
-      // $.constant_declaration,
+      $.constant_declaration,
       // $.global_declaration
     ),
 
@@ -49,11 +49,11 @@ module.exports = grammar({
       $.type
     ),
 
-    // constant_declaration: $ => seq(
-    //   // $.constant_name,
-    //   ":",
-    //   $.type
-    // ),
+    constant_declaration: $ => seq(
+      alias($._constant, $.constant),
+      ":",
+      $.type
+    ),
     
     // global_declaration: $ => seq(
     //   $.global_name,

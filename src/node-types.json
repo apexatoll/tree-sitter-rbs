@@ -30,6 +30,25 @@
     }
   },
   {
+    "type": "constant_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "declaration",
     "named": true,
     "fields": {},
@@ -39,6 +58,10 @@
       "types": [
         {
           "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "constant_declaration",
           "named": true
         },
         {
@@ -167,12 +190,20 @@
     }
   },
   {
+    "type": ":",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
   {
     "type": "class",
     "named": false
+  },
+  {
+    "type": "constant",
+    "named": true
   },
   {
     "type": "end",

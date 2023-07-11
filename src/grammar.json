@@ -26,6 +26,10 @@
         {
           "type": "SYMBOL",
           "name": "type_alias_declaration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "constant_declaration"
         }
       ]
     },
@@ -95,6 +99,28 @@
         {
           "type": "STRING",
           "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
+    "constant_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_constant"
+          },
+          "named": true,
+          "value": "constant"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
         },
         {
           "type": "SYMBOL",
