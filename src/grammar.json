@@ -8,6 +8,25 @@
         "name": "declaration"
       }
     },
+    "_constant": {
+      "type": "PATTERN",
+      "value": "[A-Z]\\w*"
+    },
+    "_global": {
+      "type": "PATTERN",
+      "value": "\\$[a-zA-Z]\\w+"
+    },
+    "_interface": {
+      "type": "PATTERN",
+      "value": "_[A-Z]\\w*"
+    },
+    "_scope": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "::"
+      }
+    },
     "declaration": {
       "type": "CHOICE",
       "members": [
@@ -153,25 +172,6 @@
           "name": "type"
         }
       ]
-    },
-    "_global": {
-      "type": "PATTERN",
-      "value": "\\$[a-zA-Z]\\w+"
-    },
-    "_constant": {
-      "type": "PATTERN",
-      "value": "[A-Z]\\w*"
-    },
-    "_interface": {
-      "type": "PATTERN",
-      "value": "_[A-Z]\\w*"
-    },
-    "_scope": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": "::"
-      }
     },
     "class_name": {
       "type": "SEQ",

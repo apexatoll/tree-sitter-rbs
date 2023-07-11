@@ -6,6 +6,14 @@ module.exports = grammar({
       $.declaration
     ),
 
+    _constant: $ => /[A-Z]\w*/,
+
+    _global: $ => /\$[a-zA-Z]\w+/,
+
+    _interface: $ => /_[A-Z]\w*/,
+
+    _scope: $ => token("::"),
+
     declaration: $ => choice(
       $.class_declaration,
       $.module_declaration,
@@ -60,14 +68,6 @@ module.exports = grammar({
       ":",
       $.type
     ),
-
-    _global: $ => /\$[a-zA-Z]\w+/,
-
-    _constant: $ => /[A-Z]\w*/,
-
-    _interface: $ => /_[A-Z]\w*/,
-
-    _scope: $ => token("::"),
 
     class_name: $ => seq(
       optional($.namespace),
