@@ -6,6 +6,8 @@ module.exports = grammar({
       $.declaration
     ),
 
+    _alias: $ => /[a-z]\w*/,
+
     _constant: $ => /[A-Z]\w*/,
 
     _global: $ => /\$[a-zA-Z]\w+/,
@@ -51,7 +53,7 @@ module.exports = grammar({
 
     type_alias_declaration: $ => seq(
       "type",
-      // $.alias_name,
+      $.alias_name,
       // $.module_type_parameters,
       "=",
       $.type
@@ -67,6 +69,11 @@ module.exports = grammar({
       alias($._global, $.global),
       ":",
       $.type
+    ),
+
+    alias_name: $ => seq(
+      optional($.namespace),
+      $._alias
     ),
 
     class_name: $ => seq(
