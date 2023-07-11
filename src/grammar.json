@@ -8,6 +8,10 @@
         "name": "declaration"
       }
     },
+    "_alias": {
+      "type": "PATTERN",
+      "value": "[a-z]\\w*"
+    },
     "_constant": {
       "type": "PATTERN",
       "value": "[A-Z]\\w*"
@@ -120,6 +124,10 @@
           "value": "type"
         },
         {
+          "type": "SYMBOL",
+          "name": "alias_name"
+        },
+        {
           "type": "STRING",
           "value": "="
         },
@@ -170,6 +178,27 @@
         {
           "type": "SYMBOL",
           "name": "type"
+        }
+      ]
+    },
+    "alias_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "namespace"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_alias"
         }
       ]
     },
@@ -250,6 +279,15 @@
       ]
     },
     "type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_builtin_type"
+        }
+      ]
+    },
+    "_builtin_type": {
       "type": "CHOICE",
       "members": [
         {

@@ -2,11 +2,13 @@
 Type alias skeleton
 ================================================================================
 
-type = untyped
+type foobar = untyped
 
 --------------------------------------------------------------------------------
 
 (program
   (declaration
     (type_alias_declaration
+      (alias_name)
       (type))))
+

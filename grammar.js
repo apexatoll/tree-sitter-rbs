@@ -92,7 +92,45 @@ module.exports = grammar({
     ),
 
     type: $ => choice(
+      $._builtin_type,
+      // $._literal_type,
+      // $._operator_type,
+      // $._namespaceable_type,
+    ),
+
+    _builtin_type: $ => choice(
+      // "top",
+      // "bot",
+      // "self"
+      // "instance",
+      // "class",
+      // "nil",
+      // "bool",
+      // "void",
       "untyped"
-    )
+    ),
+
+    // _literal_type: $ => choice(
+      // $.string_literal,
+      // $.symbol_literal,
+      // $.integer_literal,
+      // $.true,
+      // $.false
+    // ),
+
+    // _operator_type: $ => choice(
+      // $.union_type,
+      // $.intersection_type,
+      // $.optional_type
+    // ),
+
+    // _namespaceable_type: $ => seq(
+      // choice(
+        // $.class_name,
+        // $.interface_name,
+        // $.alias_name
+      // ),
+      // $.type_arguments
+    // ),
   }
 })
