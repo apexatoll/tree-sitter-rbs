@@ -65,6 +65,10 @@
           "named": true
         },
         {
+          "type": "global_declaration",
+          "named": true
+        },
+        {
           "type": "interface_declaration",
           "named": true
         },
@@ -74,6 +78,25 @@
         },
         {
           "type": "type_alias_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "global",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]
@@ -208,6 +231,10 @@
   {
     "type": "end",
     "named": false
+  },
+  {
+    "type": "global",
+    "named": true
   },
   {
     "type": "interface",

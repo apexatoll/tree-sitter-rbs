@@ -12,7 +12,7 @@ module.exports = grammar({
       $.interface_declaration,
       $.type_alias_declaration,
       $.constant_declaration,
-      // $.global_declaration
+      $.global_declaration
     ),
 
     class_declaration: $ => seq(
@@ -55,11 +55,13 @@ module.exports = grammar({
       $.type
     ),
     
-    // global_declaration: $ => seq(
-    //   $.global_name,
-    //   ":",
-    //   $.type
-    // ),
+    global_declaration: $ => seq(
+      alias($._global, $.global),
+      ":",
+      $.type
+    ),
+
+    _global: $ => /\$[a-zA-Z]\w+/,
 
     _constant: $ => /[A-Z]\w*/,
 

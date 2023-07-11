@@ -30,6 +30,10 @@
         {
           "type": "SYMBOL",
           "name": "constant_declaration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "global_declaration"
         }
       ]
     },
@@ -127,6 +131,32 @@
           "name": "type"
         }
       ]
+    },
+    "global_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_global"
+          },
+          "named": true,
+          "value": "global"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
+    "_global": {
+      "type": "PATTERN",
+      "value": "\\$[a-zA-Z]\\w+"
     },
     "_constant": {
       "type": "PATTERN",
