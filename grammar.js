@@ -17,7 +17,7 @@ module.exports = grammar({
 
     class_declaration: $ => seq(
       "class",
-      // $.class_name,
+      alias($.constant, $.class_name),
       // $.module_type_parameters,
       // < $.class_name $.type_arguments
       // $.members,
@@ -26,7 +26,7 @@ module.exports = grammar({
 
     module_declaration: $ => seq(
       "module",
-      // $.module_name,
+      alias($.constant, $.module_name),
       // $.module_type_parameters,
       // : $.module_self_types,
       // $.members,
@@ -60,6 +60,20 @@ module.exports = grammar({
     //   ":",
     //   $.type
     // ),
+    
+    constant: $ => seq(
+      optional($.namespace),
+      /[A-Z]\w*/
+    ),
+
+    namespace: $ => choice(
+      "::",
+      seq(
+        optional($.namespace),
+        /[A-Z]\w*/,
+        "::"
+      )
+    ),
 
     type: $ => choice(
       "untyped"

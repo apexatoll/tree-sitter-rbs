@@ -37,6 +37,15 @@
           "value": "class"
         },
         {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "constant"
+          },
+          "named": true,
+          "value": "class_name"
+        },
+        {
           "type": "STRING",
           "value": "end"
         }
@@ -48,6 +57,15 @@
         {
           "type": "STRING",
           "value": "module"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "constant"
+          },
+          "named": true,
+          "value": "module_name"
         },
         {
           "type": "STRING",
@@ -82,6 +100,61 @@
         {
           "type": "SYMBOL",
           "name": "type"
+        }
+      ]
+    },
+    "constant": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "namespace"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "PATTERN",
+          "value": "[A-Z]\\w*"
+        }
+      ]
+    },
+    "namespace": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "::"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "namespace"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "PATTERN",
+              "value": "[A-Z]\\w*"
+            },
+            {
+              "type": "STRING",
+              "value": "::"
+            }
+          ]
         }
       ]
     },
