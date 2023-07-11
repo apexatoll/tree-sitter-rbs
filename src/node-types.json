@@ -59,7 +59,32 @@
   {
     "type": "interface_declaration",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "interface_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "interface_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "namespace",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "module_declaration",

@@ -35,7 +35,7 @@ module.exports = grammar({
 
     interface_declaration: $ => seq(
       "interface",
-      // $.interface_name,
+      $.interface_name,
       // $.module_type_parameters,
       // $.interface_members,
       "end"
@@ -63,11 +63,18 @@ module.exports = grammar({
 
     _constant: $ => /[A-Z]\w*/,
 
+    _interface: $ => /_[A-Z]\w*/,
+
     _scope: $ => token("::"),
 
     class_name: $ => seq(
       optional($.namespace),
       $._constant
+    ),
+
+    interface_name: $ => seq(
+      optional($.namespace),
+      $._interface
     ),
 
     namespace: $ => choice(

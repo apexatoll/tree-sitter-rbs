@@ -76,6 +76,10 @@
           "value": "interface"
         },
         {
+          "type": "SYMBOL",
+          "name": "interface_name"
+        },
+        {
           "type": "STRING",
           "value": "end"
         }
@@ -102,6 +106,10 @@
       "type": "PATTERN",
       "value": "[A-Z]\\w*"
     },
+    "_interface": {
+      "type": "PATTERN",
+      "value": "_[A-Z]\\w*"
+    },
     "_scope": {
       "type": "TOKEN",
       "content": {
@@ -127,6 +135,27 @@
         {
           "type": "SYMBOL",
           "name": "_constant"
+        }
+      ]
+    },
+    "interface_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "namespace"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_interface"
         }
       ]
     },
