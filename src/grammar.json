@@ -37,13 +37,8 @@
           "value": "class"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "constant"
-          },
-          "named": true,
-          "value": "class_name"
+          "type": "SYMBOL",
+          "name": "class_name"
         },
         {
           "type": "STRING",
@@ -62,7 +57,7 @@
           "type": "ALIAS",
           "content": {
             "type": "SYMBOL",
-            "name": "constant"
+            "name": "class_name"
           },
           "named": true,
           "value": "module_name"
@@ -103,7 +98,18 @@
         }
       ]
     },
-    "constant": {
+    "_constant": {
+      "type": "PATTERN",
+      "value": "[A-Z]\\w*"
+    },
+    "_scope": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "::"
+      }
+    },
+    "class_name": {
       "type": "SEQ",
       "members": [
         {
@@ -119,8 +125,8 @@
           ]
         },
         {
-          "type": "PATTERN",
-          "value": "[A-Z]\\w*"
+          "type": "SYMBOL",
+          "name": "_constant"
         }
       ]
     },
@@ -128,8 +134,8 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "STRING",
-          "value": "::"
+          "type": "SYMBOL",
+          "name": "_scope"
         },
         {
           "type": "SEQ",
@@ -147,12 +153,12 @@
               ]
             },
             {
-              "type": "PATTERN",
-              "value": "[A-Z]\\w*"
+              "type": "SYMBOL",
+              "name": "_constant"
             },
             {
-              "type": "STRING",
-              "value": "::"
+              "type": "SYMBOL",
+              "name": "_scope"
             }
           ]
         }

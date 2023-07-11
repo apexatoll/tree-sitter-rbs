@@ -23,8 +23,8 @@ enum {
   anon_sym_interface = 4,
   anon_sym_type = 5,
   anon_sym_EQ = 6,
-  aux_sym_constant_token1 = 7,
-  anon_sym_COLON_COLON = 8,
+  sym__constant = 7,
+  sym__scope = 8,
   anon_sym_untyped = 9,
   sym_program = 10,
   sym_declaration = 11,
@@ -32,7 +32,7 @@ enum {
   sym_module_declaration = 13,
   sym_interface_declaration = 14,
   sym_type_alias_declaration = 15,
-  sym_constant = 16,
+  sym_class_name = 16,
   sym_namespace = 17,
   sym_type = 18,
   aux_sym_program_repeat1 = 19,
@@ -47,8 +47,8 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_interface] = "interface",
   [anon_sym_type] = "type",
   [anon_sym_EQ] = "=",
-  [aux_sym_constant_token1] = "constant_token1",
-  [anon_sym_COLON_COLON] = "::",
+  [sym__constant] = "_constant",
+  [sym__scope] = "_scope",
   [anon_sym_untyped] = "untyped",
   [sym_program] = "program",
   [sym_declaration] = "declaration",
@@ -56,7 +56,7 @@ static const char * const ts_symbol_names[] = {
   [sym_module_declaration] = "module_declaration",
   [sym_interface_declaration] = "interface_declaration",
   [sym_type_alias_declaration] = "type_alias_declaration",
-  [sym_constant] = "class_name",
+  [sym_class_name] = "class_name",
   [sym_namespace] = "namespace",
   [sym_type] = "type",
   [aux_sym_program_repeat1] = "program_repeat1",
@@ -71,8 +71,8 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_interface] = anon_sym_interface,
   [anon_sym_type] = anon_sym_type,
   [anon_sym_EQ] = anon_sym_EQ,
-  [aux_sym_constant_token1] = aux_sym_constant_token1,
-  [anon_sym_COLON_COLON] = anon_sym_COLON_COLON,
+  [sym__constant] = sym__constant,
+  [sym__scope] = sym__scope,
   [anon_sym_untyped] = anon_sym_untyped,
   [sym_program] = sym_program,
   [sym_declaration] = sym_declaration,
@@ -80,7 +80,7 @@ static const TSSymbol ts_symbol_map[] = {
   [sym_module_declaration] = sym_module_declaration,
   [sym_interface_declaration] = sym_interface_declaration,
   [sym_type_alias_declaration] = sym_type_alias_declaration,
-  [sym_constant] = sym_constant,
+  [sym_class_name] = sym_class_name,
   [sym_namespace] = sym_namespace,
   [sym_type] = sym_type,
   [aux_sym_program_repeat1] = aux_sym_program_repeat1,
@@ -116,13 +116,13 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [aux_sym_constant_token1] = {
+  [sym__constant] = {
     .visible = false,
-    .named = false,
+    .named = true,
   },
-  [anon_sym_COLON_COLON] = {
-    .visible = true,
-    .named = false,
+  [sym__scope] = {
+    .visible = false,
+    .named = true,
   },
   [anon_sym_untyped] = {
     .visible = true,
@@ -152,7 +152,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym_constant] = {
+  [sym_class_name] = {
     .visible = true,
     .named = true,
   },
@@ -182,8 +182,8 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
 };
 
 static const uint16_t ts_non_terminal_alias_map[] = {
-  sym_constant, 2,
-    sym_constant,
+  sym_class_name, 2,
+    sym_class_name,
     alias_sym_module_name,
   0,
 };
@@ -344,14 +344,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_EQ);
       END_STATE();
     case 37:
-      ACCEPT_TOKEN(aux_sym_constant_token1);
+      ACCEPT_TOKEN(sym__constant);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(37);
       END_STATE();
     case 38:
-      ACCEPT_TOKEN(anon_sym_COLON_COLON);
+      ACCEPT_TOKEN(sym__scope);
       END_STATE();
     case 39:
       ACCEPT_TOKEN(anon_sym_untyped);
@@ -397,8 +397,8 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_interface] = ACTIONS(1),
     [anon_sym_type] = ACTIONS(1),
     [anon_sym_EQ] = ACTIONS(1),
-    [aux_sym_constant_token1] = ACTIONS(1),
-    [anon_sym_COLON_COLON] = ACTIONS(1),
+    [sym__constant] = ACTIONS(1),
+    [sym__scope] = ACTIONS(1),
     [anon_sym_untyped] = ACTIONS(1),
   },
   [1] = {
@@ -488,32 +488,32 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_type,
   [48] = 4,
     ACTIONS(41), 1,
-      aux_sym_constant_token1,
+      sym__constant,
     ACTIONS(43), 1,
-      anon_sym_COLON_COLON,
+      sym__scope,
     STATE(19), 1,
       sym_namespace,
     STATE(20), 1,
-      sym_constant,
+      sym_class_name,
   [61] = 4,
     ACTIONS(41), 1,
-      aux_sym_constant_token1,
+      sym__constant,
     ACTIONS(43), 1,
-      anon_sym_COLON_COLON,
+      sym__scope,
     STATE(16), 1,
-      sym_constant,
+      sym_class_name,
     STATE(19), 1,
       sym_namespace,
   [74] = 2,
     ACTIONS(45), 1,
       anon_sym_end,
     ACTIONS(47), 1,
-      anon_sym_COLON_COLON,
+      sym__scope,
   [81] = 2,
     ACTIONS(49), 1,
       anon_sym_end,
     ACTIONS(51), 1,
-      anon_sym_COLON_COLON,
+      sym__scope,
   [88] = 2,
     ACTIONS(53), 1,
       anon_sym_untyped,
@@ -527,25 +527,25 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_end,
   [103] = 1,
     ACTIONS(59), 1,
-      aux_sym_constant_token1,
+      sym__constant,
   [107] = 1,
     ACTIONS(61), 1,
       anon_sym_end,
   [111] = 1,
     ACTIONS(63), 1,
-      aux_sym_constant_token1,
+      sym__constant,
   [115] = 1,
     ACTIONS(65), 1,
       anon_sym_end,
   [119] = 1,
     ACTIONS(67), 1,
-      aux_sym_constant_token1,
+      sym__constant,
   [123] = 1,
     ACTIONS(69), 1,
       anon_sym_EQ,
   [127] = 1,
     ACTIONS(71), 1,
-      aux_sym_constant_token1,
+      sym__constant,
 };
 
 static const uint32_t ts_small_parse_table_map[] = {
@@ -593,9 +593,9 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [39] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_interface_declaration, 2),
   [41] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
   [43] = {.entry = {.count = 1, .reusable = true}}, SHIFT(21),
-  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_constant, 1),
+  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_class_name, 1),
   [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(17),
-  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_constant, 2),
+  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_class_name, 2),
   [51] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
   [53] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
   [55] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
