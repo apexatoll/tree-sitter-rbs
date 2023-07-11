@@ -92,21 +92,21 @@ module.exports = grammar({
     ),
 
     type: $ => choice(
-      $._builtin_type,
+      $.builtin_type,
       // $._literal_type,
       // $._operator_type,
       // $._namespaceable_type,
     ),
 
-    _builtin_type: $ => choice(
-      // "top",
-      // "bot",
-      // "self"
-      // "instance",
-      // "class",
-      // "nil",
-      // "bool",
-      // "void",
+    builtin_type: $ => choice(
+      "top",
+      "bot",
+      "self",
+      "instance",
+      "class",
+      "nil",
+      "bool",
+      "void",
       "untyped"
     ),
 

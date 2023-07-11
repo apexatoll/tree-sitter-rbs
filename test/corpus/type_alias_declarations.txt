@@ -10,5 +10,5 @@ type foobar = untyped
   (declaration
     (type_alias_declaration
       (alias_name)
-      (type))))
-
+      (type
+        (builtin_type)))))

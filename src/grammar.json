@@ -283,13 +283,45 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_builtin_type"
+          "name": "builtin_type"
         }
       ]
     },
-    "_builtin_type": {
+    "builtin_type": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "STRING",
+          "value": "top"
+        },
+        {
+          "type": "STRING",
+          "value": "bot"
+        },
+        {
+          "type": "STRING",
+          "value": "self"
+        },
+        {
+          "type": "STRING",
+          "value": "instance"
+        },
+        {
+          "type": "STRING",
+          "value": "class"
+        },
+        {
+          "type": "STRING",
+          "value": "nil"
+        },
+        {
+          "type": "STRING",
+          "value": "bool"
+        },
+        {
+          "type": "STRING",
+          "value": "void"
+        },
         {
           "type": "STRING",
           "value": "untyped"

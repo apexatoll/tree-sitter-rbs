@@ -10,7 +10,8 @@ Foobar: untyped
   (declaration
     (constant_declaration
       (constant)
-      (type))))
+      (type
+        (builtin_type)))))
 
 ================================================================================
 Nested global constant declaration (invalid)
@@ -25,4 +26,5 @@ Foo::Bar::Baz: untyped
   (declaration
     (constant_declaration
       (constant)
-      (type))))
+      (type
+        (builtin_type)))))

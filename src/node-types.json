@@ -15,6 +15,11 @@
     }
   },
   {
+    "type": "builtin_type",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "class_declaration",
     "named": true,
     "fields": {},
@@ -210,7 +215,17 @@
   {
     "type": "type",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "builtin_type",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "type_alias_declaration",
@@ -240,6 +255,14 @@
     "named": false
   },
   {
+    "type": "bool",
+    "named": false
+  },
+  {
+    "type": "bot",
+    "named": false
+  },
+  {
     "type": "class",
     "named": false
   },
@@ -256,6 +279,10 @@
     "named": true
   },
   {
+    "type": "instance",
+    "named": false
+  },
+  {
     "type": "interface",
     "named": false
   },
@@ -264,11 +291,27 @@
     "named": false
   },
   {
+    "type": "nil",
+    "named": false
+  },
+  {
+    "type": "self",
+    "named": false
+  },
+  {
+    "type": "top",
+    "named": false
+  },
+  {
     "type": "type",
     "named": false
   },
   {
     "type": "untyped",
+    "named": false
+  },
+  {
+    "type": "void",
     "named": false
   }
 ]

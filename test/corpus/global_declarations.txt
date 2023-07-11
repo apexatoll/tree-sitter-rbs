@@ -10,7 +10,8 @@ $foobar: untyped
   (declaration
     (global_declaration
       (global)
-      (type))))
+      (type
+        (builtin_type)))))
 
 ================================================================================
 Capitalized global declaration
@@ -24,4 +25,5 @@ $FOOBAR: untyped
   (declaration
     (global_declaration
       (global)
-      (type))))
+      (type
+        (builtin_type)))))
