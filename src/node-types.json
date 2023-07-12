@@ -123,6 +123,11 @@
     }
   },
   {
+    "type": "integer_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "interface_declaration",
     "named": true,
     "fields": {},
@@ -147,6 +152,37 @@
       "types": [
         {
           "type": "namespace",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "literal_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "false_literal",
+          "named": true
+        },
+        {
+          "type": "integer_literal",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "symbol_literal",
+          "named": true
+        },
+        {
+          "type": "true_literal",
           "named": true
         }
       ]
@@ -213,6 +249,16 @@
     }
   },
   {
+    "type": "string_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "symbol_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "type",
     "named": true,
     "fields": {},
@@ -222,6 +268,10 @@
       "types": [
         {
           "type": "builtin_type",
+          "named": true
+        },
+        {
+          "type": "literal_type",
           "named": true
         }
       ]
@@ -275,6 +325,10 @@
     "named": false
   },
   {
+    "type": "false_literal",
+    "named": true
+  },
+  {
     "type": "global",
     "named": true
   },
@@ -301,6 +355,10 @@
   {
     "type": "top",
     "named": false
+  },
+  {
+    "type": "true_literal",
+    "named": true
   },
   {
     "type": "type",

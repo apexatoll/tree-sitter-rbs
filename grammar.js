@@ -10,11 +10,17 @@ module.exports = grammar({
 
     _constant: $ => /[A-Z]\w*/,
 
+    _delimited_symbol: $ => /:["']@?_*[A-Za-z]\w*["']/,
+
     _global: $ => /\$[a-zA-Z]\w+/,
+
+    _integer: $ => /[0-9][0-9_]*/,
 
     _interface: $ => /_[A-Z]\w*/,
 
     _scope: $ => token("::"),
+
+    _symbol: $ => /:@?_*[A-Za-z]\w*/,
 
     declaration: $ => choice(
       $.class_declaration,
@@ -93,7 +99,7 @@ module.exports = grammar({
 
     type: $ => choice(
       $.builtin_type,
-      // $._literal_type,
+      $.literal_type,
       // $._operator_type,
       // $._namespaceable_type,
     ),
@@ -110,13 +116,13 @@ module.exports = grammar({
       "untyped"
     ),
 
-    // _literal_type: $ => choice(
-      // $.string_literal,
-      // $.symbol_literal,
-      // $.integer_literal,
-      // $.true,
-      // $.false
-    // ),
+    literal_type: $ => choice(
+      $.string_literal,
+      $.symbol_literal,
+      alias($._integer, $.integer_literal),
+      $.true_literal,
+      $.false_literal
+    ),
 
     // _operator_type: $ => choice(
       // $.union_type,
@@ -132,5 +138,21 @@ module.exports = grammar({
       // ),
       // $.type_arguments
     // ),
+    //
+
+    string_literal: $ => choice(
+      /'.*'/, /".*"/
+    ),
+
+    symbol_literal: $ => choice(
+      $._symbol,
+      $._delimited_symbol
+    ),
+
+    true_literal: $ => token("true"),
+
+    false_literal: $ => token("false"),
+
+    integer_literal: $ => /[0-9][0-9_]*/
   }
 })

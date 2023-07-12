@@ -16,9 +16,17 @@
       "type": "PATTERN",
       "value": "[A-Z]\\w*"
     },
+    "_delimited_symbol": {
+      "type": "PATTERN",
+      "value": ":[\"']@?_*[A-Za-z]\\w*[\"']"
+    },
     "_global": {
       "type": "PATTERN",
       "value": "\\$[a-zA-Z]\\w+"
+    },
+    "_integer": {
+      "type": "PATTERN",
+      "value": "[0-9][0-9_]*"
     },
     "_interface": {
       "type": "PATTERN",
@@ -30,6 +38,10 @@
         "type": "STRING",
         "value": "::"
       }
+    },
+    "_symbol": {
+      "type": "PATTERN",
+      "value": ":@?_*[A-Za-z]\\w*"
     },
     "declaration": {
       "type": "CHOICE",
@@ -284,6 +296,10 @@
         {
           "type": "SYMBOL",
           "name": "builtin_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "literal_type"
         }
       ]
     },
@@ -327,6 +343,80 @@
           "value": "untyped"
         }
       ]
+    },
+    "literal_type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "string_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "symbol_literal"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_integer"
+          },
+          "named": true,
+          "value": "integer_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "true_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "false_literal"
+        }
+      ]
+    },
+    "string_literal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "'.*'"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\".*\""
+        }
+      ]
+    },
+    "symbol_literal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_symbol"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_delimited_symbol"
+        }
+      ]
+    },
+    "true_literal": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "true"
+      }
+    },
+    "false_literal": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "false"
+      }
+    },
+    "integer_literal": {
+      "type": "PATTERN",
+      "value": "[0-9][0-9_]*"
     }
   },
   "extras": [

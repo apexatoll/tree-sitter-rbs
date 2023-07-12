@@ -22,6 +22,12 @@ Foo::Bar::Baz: untyped
 --------------------------------------------------------------------------------
 
 (program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (literal_type
+          (symbol_literal)))))
   (ERROR)
   (declaration
     (constant_declaration
