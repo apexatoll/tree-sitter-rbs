@@ -77,6 +77,69 @@ module.exports = grammar({
       $.type
     ),
 
+    // member: $ => choice(
+      // $.ivar_member,
+      // $.method_member,
+      // $.attribute_member,
+      // $.include_member,
+      // $.extend_member,
+      // $.prepend_member,
+      // $.alias_member,
+      // $.visibility_member
+    // ),
+
+    // ivar_member: $ => seq(
+    //   $.ivar_name,
+    //   ":",
+    //   $.type
+    // ),
+
+    // method_member: $ => seq(
+    //   $.visibility,
+    //   "def",
+    //   $.method_name,
+    //   ":",
+    //   $.method_types
+    // ),
+
+    // attribute_member: $ => seq(
+    //   $.visibility,
+    //   $.attribute_type,
+    //   $.method_name,
+    //   ":",
+    //   < handle ivar specs
+    //   $.type
+    // ),
+
+    // include_member: $ => seq(
+    //   "include",
+    //   choice($.class_name, $.interface_name),
+    //   $.type_arguments
+    // ),
+
+    // extend_member: $ => seq(
+    //   "extend",
+    //   choice($.class_name, $.interface_name),
+    //   $.type_arguments
+    // ),
+
+    // prepend_member: $ => seq(
+    //   "prepend",
+    //   $.class_name,
+    //   $.type_arguments
+    // ),
+
+    // alias_member: $ => seq(
+    //   "alias",
+    //   < handle singleton aliases
+    //   $.method_name,
+    //   $.method_name
+    // ),
+
+    // visibility_member: $ => seq(
+    //   choice("public", "private")
+    // ),
+
     alias_name: $ => seq(
       optional($.namespace),
       $._alias
