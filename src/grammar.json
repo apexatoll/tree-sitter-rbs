@@ -32,6 +32,10 @@
       "type": "PATTERN",
       "value": "_[A-Z]\\w*"
     },
+    "_ivar": {
+      "type": "PATTERN",
+      "value": "@\\w+"
+    },
     "_scope": {
       "type": "TOKEN",
       "content": {
@@ -84,6 +88,18 @@
           "name": "class_name"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "members"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "STRING",
           "value": "end"
         }
@@ -104,6 +120,18 @@
           },
           "named": true,
           "value": "module_name"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "members"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -182,6 +210,44 @@
           },
           "named": true,
           "value": "global"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
+    "members": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "member"
+      }
+    },
+    "member": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ivar_member"
+        }
+      ]
+    },
+    "ivar_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_ivar"
+          },
+          "named": true,
+          "value": "ivar_name"
         },
         {
           "type": "STRING",

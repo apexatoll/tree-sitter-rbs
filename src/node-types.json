@@ -24,11 +24,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "class_name",
+          "named": true
+        },
+        {
+          "type": "members",
           "named": true
         }
       ]
@@ -173,6 +177,25 @@
     }
   },
   {
+    "type": "ivar_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ivar_name",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "literal_type",
     "named": true,
     "fields": {},
@@ -204,13 +227,47 @@
     }
   },
   {
-    "type": "module_declaration",
+    "type": "member",
     "named": true,
     "fields": {},
     "children": {
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "ivar_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "members",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "members",
+          "named": true
+        },
         {
           "type": "module_name",
           "named": true
@@ -446,6 +503,10 @@
   {
     "type": "interface",
     "named": false
+  },
+  {
+    "type": "ivar_name",
+    "named": true
   },
   {
     "type": "module",

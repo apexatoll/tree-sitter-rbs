@@ -18,6 +18,8 @@ module.exports = grammar({
 
     _interface: $ => /_[A-Z]\w*/,
 
+    _ivar: $ => /@\w+/,
+
     _scope: $ => token("::"),
 
     _symbol: $ => /:@?_*[A-Za-z]\w*/,
@@ -36,7 +38,7 @@ module.exports = grammar({
       $.class_name,
       // $.module_type_parameters,
       // < $.class_name $.type_arguments
-      // $.members,
+      optional($.members),
       "end"
     ),
 
@@ -45,7 +47,7 @@ module.exports = grammar({
       alias($.class_name, $.module_name),
       // $.module_type_parameters,
       // : $.module_self_types,
-      // $.members,
+      optional($.members),
       "end"
     ),
 
@@ -77,8 +79,10 @@ module.exports = grammar({
       $.type
     ),
 
-    // member: $ => choice(
-      // $.ivar_member,
+    members: $ => repeat1($.member),
+
+    member: $ => choice(
+      $.ivar_member,
       // $.method_member,
       // $.attribute_member,
       // $.include_member,
@@ -86,13 +90,13 @@ module.exports = grammar({
       // $.prepend_member,
       // $.alias_member,
       // $.visibility_member
-    // ),
+    ),
 
-    // ivar_member: $ => seq(
-    //   $.ivar_name,
-    //   ":",
-    //   $.type
-    // ),
+    ivar_member: $ => seq(
+      alias($._ivar, $.ivar_name),
+      ":",
+      $.type
+    ),
 
     // method_member: $ => seq(
     //   $.visibility,
