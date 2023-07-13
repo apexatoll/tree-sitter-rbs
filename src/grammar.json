@@ -304,6 +304,10 @@
         {
           "type": "SYMBOL",
           "name": "operator_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "namespaceable_type"
         }
       ]
     },
@@ -392,6 +396,28 @@
         {
           "type": "SYMBOL",
           "name": "optional_type"
+        }
+      ]
+    },
+    "namespaceable_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "class_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "interface_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "alias_name"
+            }
+          ]
         }
       ]
     },

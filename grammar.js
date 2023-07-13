@@ -101,7 +101,7 @@ module.exports = grammar({
       $.builtin_type,
       $.literal_type,
       $.operator_type,
-      // $._namespaceable_type,
+      $.namespaceable_type,
     ),
 
     builtin_type: $ => choice(
@@ -130,15 +130,10 @@ module.exports = grammar({
       $.optional_type
     ),
 
-    // _namespaceable_type: $ => seq(
-      // choice(
-        // $.class_name,
-        // $.interface_name,
-        // $.alias_name
-      // ),
+    namespaceable_type: $ => seq(
+      choice($.class_name, $.interface_name, $.alias_name),
       // $.type_arguments
-    // ),
-    //
+    ),
 
     string_literal: $ => choice(
       /'.*'/, /".*"/
