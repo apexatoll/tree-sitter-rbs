@@ -306,3 +306,111 @@ TEST: false
       (type
         (literal_type
           (false_literal))))))
+
+================================================================================
+Single union
+================================================================================
+
+TEST: bool | nil
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (operator_type
+          (union_type
+            (type
+              (builtin_type))
+            (type
+              (builtin_type))))))))
+
+================================================================================
+Multiple unions
+================================================================================
+
+TEST: bool | instance | nil
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (operator_type
+          (union_type
+            (type
+              (builtin_type))
+            (type
+              (operator_type
+                (union_type
+                  (type
+                    (builtin_type))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single intersection
+================================================================================
+
+TEST: bool & nil
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (operator_type
+          (intersection_type
+            (type
+              (builtin_type))
+            (type
+              (builtin_type))))))))
+
+================================================================================
+Multiple intersections
+================================================================================
+
+TEST: bool & instance & nil
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (operator_type
+          (intersection_type
+            (type
+              (builtin_type))
+            (type
+              (operator_type
+                (intersection_type
+                  (type
+                    (builtin_type))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Optional type
+================================================================================
+
+TEST: bool?
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (operator_type
+          (optional_type
+            (type
+              (builtin_type))))))))

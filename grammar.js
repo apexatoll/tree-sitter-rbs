@@ -100,7 +100,7 @@ module.exports = grammar({
     type: $ => choice(
       $.builtin_type,
       $.literal_type,
-      // $._operator_type,
+      $.operator_type,
       // $._namespaceable_type,
     ),
 
@@ -124,11 +124,11 @@ module.exports = grammar({
       $.false_literal
     ),
 
-    // _operator_type: $ => choice(
-      // $.union_type,
-      // $.intersection_type,
-      // $.optional_type
-    // ),
+    operator_type: $ => choice(
+      $.union_type,
+      $.intersection_type,
+      $.optional_type
+    ),
 
     // _namespaceable_type: $ => seq(
       // choice(
@@ -153,6 +153,18 @@ module.exports = grammar({
 
     false_literal: $ => token("false"),
 
-    integer_literal: $ => /[0-9][0-9_]*/
+    integer_literal: $ => /[0-9][0-9_]*/,
+
+    union_type: $ => prec.right(
+      seq($.type, "|", $.type)
+    ),
+
+    intersection_type: $ => prec.right(
+      seq($.type, "&", $.type)
+    ),
+
+    optional_type: $ => seq(
+      $.type, token.immediate("?")
+    )
   }
 })
