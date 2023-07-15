@@ -234,6 +234,18 @@
         {
           "type": "SYMBOL",
           "name": "ivar_member"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "include_member"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "extend_member"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "prepend_member"
         }
       ]
     },
@@ -256,6 +268,63 @@
         {
           "type": "SYMBOL",
           "name": "type"
+        }
+      ]
+    },
+    "include_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "include"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "class_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "interface_name"
+            }
+          ]
+        }
+      ]
+    },
+    "extend_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "extend"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "class_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "interface_name"
+            }
+          ]
+        }
+      ]
+    },
+    "prepend_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "prepend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_name"
         }
       ]
     },

@@ -108,6 +108,25 @@
     }
   },
   {
+    "type": "extend_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "class_name",
+          "named": true
+        },
+        {
+          "type": "interface_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "global_declaration",
     "named": true,
     "fields": {},
@@ -121,6 +140,25 @@
         },
         {
           "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "class_name",
+          "named": true
+        },
+        {
+          "type": "interface_name",
           "named": true
         }
       ]
@@ -235,7 +273,19 @@
       "required": true,
       "types": [
         {
+          "type": "extend_member",
+          "named": true
+        },
+        {
+          "type": "include_member",
+          "named": true
+        },
+        {
           "type": "ivar_member",
+          "named": true
+        },
+        {
+          "type": "prepend_member",
           "named": true
         }
       ]
@@ -367,6 +417,21 @@
     }
   },
   {
+    "type": "prepend_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "class_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "program",
     "named": true,
     "fields": {},
@@ -489,12 +554,20 @@
     "named": false
   },
   {
+    "type": "extend",
+    "named": false
+  },
+  {
     "type": "false_literal",
     "named": true
   },
   {
     "type": "global",
     "named": true
+  },
+  {
+    "type": "include",
+    "named": false
   },
   {
     "type": "instance",
@@ -514,6 +587,10 @@
   },
   {
     "type": "nil",
+    "named": false
+  },
+  {
+    "type": "prepend",
     "named": false
   },
   {

@@ -1,0 +1,194 @@
+================================================================================
+Including a flat class
+================================================================================
+
+class Foo
+  include Bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (class_name)))))))
+
+================================================================================
+Including a nested class
+================================================================================
+
+class Foo
+  include Bar::Baz
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (class_name
+              (namespace))))))))
+
+================================================================================
+Including a flat interface
+================================================================================
+
+class Foo
+  include _Bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (interface_name)))))))
+
+================================================================================
+Including a nested interface
+================================================================================
+
+class Foo
+  include Bar::_Baz
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (interface_name
+              (namespace))))))))
+
+================================================================================
+Extending a flat class
+================================================================================
+
+class Foo
+  extend Bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (class_name)))))))
+
+================================================================================
+Extending a nested class
+================================================================================
+
+class Foo
+  extend Bar::Baz
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (class_name
+              (namespace))))))))
+
+================================================================================
+Extending a flat interface
+================================================================================
+
+class Foo
+  extend _Bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (interface_name)))))))
+
+================================================================================
+Extending a nested interface
+================================================================================
+
+class Foo
+  extend Bar::_Baz
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (interface_name
+              (namespace))))))))
+
+================================================================================
+Prepending a flat class
+================================================================================
+
+class Foo
+  prepend Bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (prepend_member
+            (class_name)))))))
+
+================================================================================
+Prepending a nested class
+================================================================================
+
+class Foo
+  prepend Bar::Baz
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (prepend_member
+            (class_name
+              (namespace))))))))

@@ -85,9 +85,9 @@ module.exports = grammar({
       $.ivar_member,
       // $.method_member,
       // $.attribute_member,
-      // $.include_member,
-      // $.extend_member,
-      // $.prepend_member,
+      $.include_member,
+      $.extend_member,
+      $.prepend_member,
       // $.alias_member,
       // $.visibility_member
     ),
@@ -115,23 +115,23 @@ module.exports = grammar({
     //   $.type
     // ),
 
-    // include_member: $ => seq(
-    //   "include",
-    //   choice($.class_name, $.interface_name),
-    //   $.type_arguments
-    // ),
+    include_member: $ => seq(
+      "include",
+      choice($.class_name, $.interface_name),
+      // $.type_arguments
+    ),
 
-    // extend_member: $ => seq(
-    //   "extend",
-    //   choice($.class_name, $.interface_name),
-    //   $.type_arguments
-    // ),
+    extend_member: $ => seq(
+      "extend",
+      choice($.class_name, $.interface_name),
+      // $.type_arguments
+    ),
 
-    // prepend_member: $ => seq(
-    //   "prepend",
-    //   $.class_name,
-    //   $.type_arguments
-    // ),
+    prepend_member: $ => seq(
+      "prepend",
+      $.class_name,
+      // $.type_arguments
+    ),
 
     // alias_member: $ => seq(
     //   "alias",
