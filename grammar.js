@@ -20,6 +20,8 @@ module.exports = grammar({
 
     _ivar: $ => /@\w+/,
 
+    _method: $ => /_*[A-za-z]\w*[!?]?/,
+
     _scope: $ => token("::"),
 
     _symbol: $ => /:@?_*[A-Za-z]\w*/,
@@ -88,7 +90,7 @@ module.exports = grammar({
       $.include_member,
       $.extend_member,
       $.prepend_member,
-      // $.alias_member,
+      $.alias_member,
       // $.visibility_member
     ),
 
@@ -133,12 +135,13 @@ module.exports = grammar({
       // $.type_arguments
     ),
 
-    // alias_member: $ => seq(
-    //   "alias",
-    //   < handle singleton aliases
-    //   $.method_name,
-    //   $.method_name
-    // ),
+    alias_member: $ => seq(
+      "alias",
+      choice(
+        seq($.method_name, $.method_name),
+        seq($.singleton_method_name, $.singleton_method_name)
+      )
+    ),
 
     // visibility_member: $ => seq(
     //   choice("public", "private")
@@ -162,6 +165,13 @@ module.exports = grammar({
     namespace: $ => choice(
       $._scope,
       seq(optional($.namespace), $._constant, $._scope)
+    ),
+
+    method_name: $ => $._method,
+
+    singleton_method_name: $ => seq(
+      "self.",
+      $._method,
     ),
 
     type: $ => choice(

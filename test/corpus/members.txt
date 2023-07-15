@@ -18,3 +18,43 @@ end
             (ivar_name)
             (type
               (builtin_type))))))))
+
+================================================================================
+Alias member
+================================================================================
+
+module Test
+  alias foo bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (alias_member
+            (method_name)
+            (method_name)))))))
+
+================================================================================
+Singleton alias member
+================================================================================
+
+module Test
+  alias self.foo self.bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (alias_member
+            (singleton_method_name)
+            (singleton_method_name)))))))

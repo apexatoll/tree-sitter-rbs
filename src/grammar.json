@@ -36,6 +36,10 @@
       "type": "PATTERN",
       "value": "@\\w+"
     },
+    "_method": {
+      "type": "PATTERN",
+      "value": "_*[A-za-z]\\w*[!?]?"
+    },
     "_scope": {
       "type": "TOKEN",
       "content": {
@@ -246,6 +250,10 @@
         {
           "type": "SYMBOL",
           "name": "prepend_member"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "alias_member"
         }
       ]
     },
@@ -325,6 +333,46 @@
         {
           "type": "SYMBOL",
           "name": "class_name"
+        }
+      ]
+    },
+    "alias_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "alias"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "method_name"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "method_name"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "singleton_method_name"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "singleton_method_name"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -422,6 +470,23 @@
               "name": "_scope"
             }
           ]
+        }
+      ]
+    },
+    "method_name": {
+      "type": "SYMBOL",
+      "name": "_method"
+    },
+    "singleton_method_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "self."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_method"
         }
       ]
     },

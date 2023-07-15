@@ -1,5 +1,24 @@
 [
   {
+    "type": "alias_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "method_name",
+          "named": true
+        },
+        {
+          "type": "singleton_method_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "alias_name",
     "named": true,
     "fields": {},
@@ -273,6 +292,10 @@
       "required": true,
       "types": [
         {
+          "type": "alias_member",
+          "named": true
+        },
+        {
           "type": "extend_member",
           "named": true
         },
@@ -305,6 +328,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "method_name",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "module_declaration",
@@ -447,6 +475,11 @@
     }
   },
   {
+    "type": "singleton_method_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "string_literal",
     "named": true,
     "fields": {}
@@ -534,6 +567,10 @@
     "named": false
   },
   {
+    "type": "alias",
+    "named": false
+  },
+  {
     "type": "bool",
     "named": false
   },
@@ -595,6 +632,10 @@
   },
   {
     "type": "self",
+    "named": false
+  },
+  {
+    "type": "self.",
     "named": false
   },
   {
