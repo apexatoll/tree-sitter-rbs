@@ -58,3 +58,41 @@ end
           (alias_member
             (singleton_method_name)
             (singleton_method_name)))))))
+
+================================================================================
+Public visibility member
+================================================================================
+
+module Test
+  public
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (visibility_member
+            (visibility)))))))
+
+================================================================================
+Private visibility member
+================================================================================
+
+module Test
+  private
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (visibility_member
+            (visibility)))))))

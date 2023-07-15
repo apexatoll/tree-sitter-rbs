@@ -91,7 +91,7 @@ module.exports = grammar({
       $.extend_member,
       $.prepend_member,
       $.alias_member,
-      // $.visibility_member
+      $.visibility_member
     ),
 
     ivar_member: $ => seq(
@@ -143,9 +143,15 @@ module.exports = grammar({
       )
     ),
 
-    // visibility_member: $ => seq(
-    //   choice("public", "private")
-    // ),
+    visibility_member: $ => seq(
+      $.visibility,
+      token.immediate("\n")
+    ),
+
+    visibility: $ => choice(
+      "private",
+      "public"
+    ),
 
     alias_name: $ => seq(
       optional($.namespace),

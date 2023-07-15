@@ -254,6 +254,10 @@
         {
           "type": "SYMBOL",
           "name": "alias_member"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "visibility_member"
         }
       ]
     },
@@ -373,6 +377,35 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    "visibility_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "visibility"
+        },
+        {
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "\n"
+          }
+        }
+      ]
+    },
+    "visibility": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "private"
+        },
+        {
+          "type": "STRING",
+          "value": "public"
         }
       ]
     },
