@@ -96,3 +96,204 @@ end
         (member
           (visibility_member
             (visibility)))))))
+
+================================================================================
+attr_reader
+================================================================================
+
+module Test
+  attr_reader foo: untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_reader with ivar name
+================================================================================
+
+module Test
+  attr_reader foo (@bar): untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (ivar_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_reader with no ivar
+================================================================================
+
+module Test
+  attr_reader foo (): untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_writer
+================================================================================
+
+module Test
+  attr_writer foo: untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_writer with ivar name
+================================================================================
+
+module Test
+  attr_writer foo (@bar): untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (ivar_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_writer with no ivar
+================================================================================
+
+module Test
+  attr_writer foo (): untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_accessor
+================================================================================
+
+module Test
+  attr_accessor foo: untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_accessor with ivar name
+================================================================================
+
+module Test
+  attr_accessor foo (@bar): untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (ivar_name)
+            (type
+              (builtin_type))))))))
+
+================================================================================
+attr_accessor with no ivar
+================================================================================
+
+module Test
+  attr_accessor foo (): untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (attribute_member
+            (attribute_type)
+            (method_name)
+            (type
+              (builtin_type))))))))

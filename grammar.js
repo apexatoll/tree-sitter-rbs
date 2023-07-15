@@ -86,7 +86,7 @@ module.exports = grammar({
     member: $ => choice(
       $.ivar_member,
       // $.method_member,
-      // $.attribute_member,
+      $.attribute_member,
       $.include_member,
       $.extend_member,
       $.prepend_member,
@@ -95,7 +95,7 @@ module.exports = grammar({
     ),
 
     ivar_member: $ => seq(
-      alias($._ivar, $.ivar_name),
+      $.ivar_name,
       ":",
       $.type
     ),
@@ -108,14 +108,14 @@ module.exports = grammar({
     //   $.method_types
     // ),
 
-    // attribute_member: $ => seq(
-    //   $.visibility,
-    //   $.attribute_type,
-    //   $.method_name,
-    //   ":",
-    //   < handle ivar specs
-    //   $.type
-    // ),
+    attribute_member: $ => seq(
+      optional($.visibility),
+      $.attribute_type,
+      $.method_name,
+      optional(seq("(", optional($.ivar_name), ")")),
+      ":",
+      $.type
+    ),
 
     include_member: $ => seq(
       "include",
@@ -168,6 +168,8 @@ module.exports = grammar({
       $._interface
     ),
 
+    ivar_name: $ => $._ivar,
+
     namespace: $ => choice(
       $._scope,
       seq(optional($.namespace), $._constant, $._scope)
@@ -178,6 +180,12 @@ module.exports = grammar({
     singleton_method_name: $ => seq(
       "self.",
       $._method,
+    ),
+
+    attribute_type: $ => choice(
+      "attr_reader",
+      "attr_writer",
+      "attr_accessor"
     ),
 
     type: $ => choice(

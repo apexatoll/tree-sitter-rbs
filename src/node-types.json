@@ -34,6 +34,42 @@
     }
   },
   {
+    "type": "attribute_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_type",
+          "named": true
+        },
+        {
+          "type": "ivar_name",
+          "named": true
+        },
+        {
+          "type": "method_name",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "visibility",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute_type",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "builtin_type",
     "named": true,
     "fields": {}
@@ -253,6 +289,11 @@
     }
   },
   {
+    "type": "ivar_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "literal_type",
     "named": true,
     "fields": {},
@@ -293,6 +334,10 @@
       "types": [
         {
           "type": "alias_member",
+          "named": true
+        },
+        {
+          "type": "attribute_member",
           "named": true
         },
         {
@@ -583,6 +628,14 @@
     "named": false
   },
   {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
     "type": ":",
     "named": false
   },
@@ -596,6 +649,18 @@
   },
   {
     "type": "alias",
+    "named": false
+  },
+  {
+    "type": "attr_accessor",
+    "named": false
+  },
+  {
+    "type": "attr_reader",
+    "named": false
+  },
+  {
+    "type": "attr_writer",
     "named": false
   },
   {
@@ -641,10 +706,6 @@
   {
     "type": "interface",
     "named": false
-  },
-  {
-    "type": "ivar_name",
-    "named": true
   },
   {
     "type": "module",

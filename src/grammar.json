@@ -241,6 +241,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "attribute_member"
+        },
+        {
+          "type": "SYMBOL",
           "name": "include_member"
         },
         {
@@ -265,13 +269,74 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_ivar"
-          },
-          "named": true,
-          "value": "ivar_name"
+          "type": "SYMBOL",
+          "name": "ivar_name"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
+    "attribute_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "visibility"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "attribute_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_name"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "("
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "ivar_name"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "STRING",
+                  "value": ")"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -472,6 +537,10 @@
         }
       ]
     },
+    "ivar_name": {
+      "type": "SYMBOL",
+      "name": "_ivar"
+    },
     "namespace": {
       "type": "CHOICE",
       "members": [
@@ -520,6 +589,23 @@
         {
           "type": "SYMBOL",
           "name": "_method"
+        }
+      ]
+    },
+    "attribute_type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "attr_reader"
+        },
+        {
+          "type": "STRING",
+          "value": "attr_writer"
+        },
+        {
+          "type": "STRING",
+          "value": "attr_accessor"
         }
       ]
     },
