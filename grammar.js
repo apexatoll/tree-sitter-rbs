@@ -374,6 +374,34 @@ module.exports = grammar({
       $.type, token.immediate("?")
     ),
 
+    // class_singleton_type: $ => seq(
+    //   "singleton(",
+    //   $.class_name,
+    //   ")",
+    // ),
+    
+    // record_type: $ => seq(
+    //   "{"
+    //   list of
+    //     $.record_name,
+    //     ":",
+    //     $.type,
+    //   "}"
+    // ),
+
+    // tuple_type: $ => seq(
+    //   "["
+    //   list of $.type,
+    //   "]"
+    // ),
+
+    // proc_type: $ => seq(
+    //   "^",
+    //   $.parameters,
+    //   "->",
+    //   $.type
+    // ),
+
     // bound_type: $ => choice(
     //   seq(
     //     choice($.class_name, $.interface_name),
