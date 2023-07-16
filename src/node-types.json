@@ -285,25 +285,6 @@
     }
   },
   {
-    "type": "instance_method",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "method_name",
-          "named": true
-        },
-        {
-          "type": "method_signatures",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "integer_literal",
     "named": true,
     "fields": {}
@@ -348,7 +329,19 @@
           "named": true
         },
         {
-          "type": "method_member",
+          "type": "method",
+          "named": true
+        },
+        {
+          "type": "module_function",
+          "named": true
+        },
+        {
+          "type": "singleton_method",
+          "named": true
+        },
+        {
+          "type": "visibility",
           "named": true
         }
       ]
@@ -512,11 +505,23 @@
           "named": true
         },
         {
-          "type": "method_member",
+          "type": "method",
+          "named": true
+        },
+        {
+          "type": "module_function",
           "named": true
         },
         {
           "type": "prepend_member",
+          "named": true
+        },
+        {
+          "type": "singleton_method",
+          "named": true
+        },
+        {
+          "type": "visibility",
           "named": true
         },
         {
@@ -527,7 +532,7 @@
     }
   },
   {
-    "type": "method_member",
+    "type": "method",
     "named": true,
     "fields": {},
     "children": {
@@ -535,19 +540,11 @@
       "required": true,
       "types": [
         {
-          "type": "instance_method",
+          "type": "method_name",
           "named": true
         },
         {
-          "type": "module_function",
-          "named": true
-        },
-        {
-          "type": "singleton_method",
-          "named": true
-        },
-        {
-          "type": "visibility",
+          "type": "method_signatures",
           "named": true
         }
       ]

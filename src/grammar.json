@@ -547,7 +547,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "method_member"
+          "name": "_method_member"
         },
         {
           "type": "SYMBOL",
@@ -580,7 +580,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "method_member"
+          "name": "_method_member"
         },
         {
           "type": "SYMBOL",
@@ -609,13 +609,9 @@
         }
       ]
     },
-    "method_member": {
+    "_method_member": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "SYMBOL",
-          "name": "module_function"
-        },
         {
           "type": "SEQ",
           "members": [
@@ -636,7 +632,7 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "instance_method"
+                  "name": "method"
                 },
                 {
                   "type": "SYMBOL",
@@ -645,6 +641,10 @@
               ]
             }
           ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "module_function"
         }
       ]
     },
@@ -1019,7 +1019,7 @@
         }
       ]
     },
-    "instance_method": {
+    "method": {
       "type": "SEQ",
       "members": [
         {

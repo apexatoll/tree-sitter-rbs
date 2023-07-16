@@ -113,7 +113,7 @@ module.exports = grammar({
 
     _member: $ => choice(
       $.ivar_member,
-      $.method_member,
+      $._method_member,
       $.attribute_member,
       $.include_member,
       $.extend_member,
@@ -123,7 +123,7 @@ module.exports = grammar({
     ),
 
     _interface_member: $ => choice(
-      $.method_member,
+      $._method_member,
       $.include_member,
       $.alias_member
     ),
@@ -134,15 +134,12 @@ module.exports = grammar({
       $.type
     ),
 
-    method_member: $ => choice(
-      $.module_function,
+    _method_member: $ => choice(
       seq(
         optional($.visibility),
-        choice(
-          $.instance_method,
-          $.singleton_method,
-        )
-      )
+        choice($.method, $.singleton_method)
+      ),
+      $.module_function
     ),
 
     attribute_member: $ => seq(
@@ -229,7 +226,7 @@ module.exports = grammar({
       seq(optional($.namespace), $._constant, $._scope)
     ),
 
-    instance_method: $ => seq(
+    method: $ => seq(
       "def",
       $.method_name,
       ":",

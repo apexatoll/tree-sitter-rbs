@@ -208,13 +208,12 @@ end
   (interface_declaration
     (interface_name)
     (interface_members
-      (method_member
-        (instance_method
-          (method_name)
-          (method_signatures
-            (signature
-              (type
-                (builtin_type)))))))))
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (type
+              (builtin_type))))))))
 
 ================================================================================
 Interface with alias member
