@@ -83,6 +83,32 @@ module.exports = grammar({
       $.type
     ),
 
+    // module_type_parameters: $ => seq(
+    //   "[",
+    //   list1($.module_type_parameter),
+    //   "]"
+    // ),
+
+    // module_type_parameter: $ => seq(
+    //   $.generics_unchecked,
+    //   $.generics_variance,
+    //   $.type_variable,
+    //   $.generics_bound
+    // ),
+
+    // generics_bound: $ => seq(
+    //   "<", $.bound_type
+    // ),
+
+    // generics_variance: $ => choice(
+    //   "in",
+    //   "out"
+    // ),
+
+    // generics_unchecked: $ => seq(
+    //   "unchecked"
+    // ),
+
     members: $ => repeat1($.member),
 
     member: $ => choice(
@@ -346,7 +372,15 @@ module.exports = grammar({
 
     optional_type: $ => seq(
       $.type, token.immediate("?")
-    )
+    ),
+
+    // bound_type: $ => choice(
+    //   seq(
+    //     choice($.class_name, $.interface_name),
+    //     // $.type_arguments
+    //   ),
+    //   $.class_singleton_type
+    // )
   }
 })
 
