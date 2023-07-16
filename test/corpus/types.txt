@@ -569,6 +569,26 @@ TEST: Foobar
           (class_name))))))
 
 ================================================================================
+Class name with type arguments
+================================================================================
+
+TEST: Collection[String]
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (namespaceable_type
+          (class_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
+
+================================================================================
 Nested class name type
 ================================================================================
 
@@ -586,6 +606,30 @@ TEST: Foobar::Baz
             (namespace)))))))
 
 ================================================================================
+Nested class name with type arguments
+================================================================================
+
+TEST: Foobar::Collection[String, Integer]
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (namespaceable_type
+          (class_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))
+            (type
+              (namespaceable_type
+                (class_name)))))))))
+
+================================================================================
 Interface name type
 ================================================================================
 
@@ -600,6 +644,26 @@ TEST: _Foobar
       (type
         (namespaceable_type
           (interface_name))))))
+
+================================================================================
+Interface name with type arguments
+================================================================================
+
+TEST: _Foobar[T]
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (namespaceable_type
+          (interface_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Nested interface name type
@@ -619,6 +683,27 @@ TEST: Foobar::_Baz
             (namespace)))))))
 
 ================================================================================
+Nested interface name with type arguments
+================================================================================
+
+TEST: Foobar::_Baz[Integer]
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (namespaceable_type
+          (interface_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
+
+================================================================================
 Alias name type
 ================================================================================
 
@@ -633,6 +718,26 @@ TEST: foobar
       (type
         (namespaceable_type
           (alias_name))))))
+
+================================================================================
+Alias name with type arguments
+================================================================================
+
+TEST: foobar[T]
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (namespaceable_type
+          (alias_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Nested alias name type
@@ -650,3 +755,24 @@ TEST: Foobar::baz
         (namespaceable_type
           (alias_name
             (namespace)))))))
+
+================================================================================
+Nested alias name with type arguments
+================================================================================
+
+TEST: Foobar::baz[T]
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (constant_declaration
+      (constant)
+      (type
+        (namespaceable_type
+          (alias_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))

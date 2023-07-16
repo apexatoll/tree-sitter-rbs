@@ -151,19 +151,19 @@ module.exports = grammar({
     include_member: $ => seq(
       "include",
       choice($.class_name, $.interface_name),
-      // $.type_arguments
+      optional($.type_arguments)
     ),
 
     extend_member: $ => seq(
       "extend",
       choice($.class_name, $.interface_name),
-      // $.type_arguments
+      optional($.type_arguments)
     ),
 
     prepend_member: $ => seq(
       "prepend",
       $.class_name,
-      // $.type_arguments
+      optional($.type_arguments)
     ),
 
     alias_member: $ => seq(
@@ -309,6 +309,10 @@ module.exports = grammar({
 
     double_splat_parameter: $ => seq("**", $._parameter),
 
+    type_arguments: $ => seq(
+      "[", list1($.type), "]"
+    ),
+
     type: $ => choice(
       $.builtin_type,
       $.literal_type,
@@ -348,7 +352,7 @@ module.exports = grammar({
 
     namespaceable_type: $ => seq(
       choice($.class_name, $.interface_name, $.alias_name),
-      // $.type_arguments
+      optional($.type_arguments)
     ),
 
     string_literal: $ => choice(
@@ -407,12 +411,6 @@ module.exports = grammar({
     //     // $.type_arguments
     //   ),
     //   $.class_singleton_type
-    // ),
-
-    // type_arguments: $ => seq(
-      // "[",
-      // list1($.type)
-      // "]"
     // ),
   }
 })

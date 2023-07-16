@@ -18,6 +18,29 @@ end
             (class_name)))))))
 
 ================================================================================
+Including a flat class with type arguments
+================================================================================
+
+class Foo
+  include Bar[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (class_name)
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
+
+================================================================================
 Including a nested class
 ================================================================================
 
@@ -38,6 +61,30 @@ end
               (namespace))))))))
 
 ================================================================================
+Including a nested class with type arguments
+================================================================================
+
+class Foo
+  include Bar::Baz[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (class_name
+              (namespace))
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
+
+================================================================================
 Including a flat interface
 ================================================================================
 
@@ -55,6 +102,29 @@ end
         (member
           (include_member
             (interface_name)))))))
+
+================================================================================
+Including a flat interface with type arguments
+================================================================================
+
+class Foo
+  include _Bar[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (interface_name)
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
 
 ================================================================================
 Including a nested interface
@@ -77,6 +147,30 @@ end
               (namespace))))))))
 
 ================================================================================
+Including a nested interface with type arguments
+================================================================================
+
+class Foo
+  include Bar::_Baz[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (include_member
+            (interface_name
+              (namespace))
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
+
+================================================================================
 Extending a flat class
 ================================================================================
 
@@ -94,6 +188,29 @@ end
         (member
           (extend_member
             (class_name)))))))
+
+================================================================================
+Extending a flat class with type arguments
+================================================================================
+
+class Foo
+  extend Bar[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (class_name)
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
 
 ================================================================================
 Extending a nested class
@@ -116,6 +233,30 @@ end
               (namespace))))))))
 
 ================================================================================
+Extending a nested class with type arguments
+================================================================================
+
+class Foo
+  extend Bar::Baz[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (class_name
+              (namespace))
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
+
+================================================================================
 Extending a flat interface
 ================================================================================
 
@@ -133,6 +274,29 @@ end
         (member
           (extend_member
             (interface_name)))))))
+
+================================================================================
+Extending a flat interface with type arguments
+================================================================================
+
+class Foo
+  extend _Bar[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (interface_name)
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
 
 ================================================================================
 Extending a nested interface
@@ -155,6 +319,30 @@ end
               (namespace))))))))
 
 ================================================================================
+Extending a nested interface with type arguments
+================================================================================
+
+class Foo
+  extend Bar::_Baz[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (extend_member
+            (interface_name
+              (namespace))
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
+
+================================================================================
 Prepending a flat class
 ================================================================================
 
@@ -172,6 +360,29 @@ end
         (member
           (prepend_member
             (class_name)))))))
+
+================================================================================
+Prepending a flat class with type arguments
+================================================================================
+
+class Foo
+  prepend Bar[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (prepend_member
+            (class_name)
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
 
 ================================================================================
 Prepending a nested class
@@ -192,3 +403,27 @@ end
           (prepend_member
             (class_name
               (namespace))))))))
+
+================================================================================
+Prepending a nested class with type arguments
+================================================================================
+
+class Foo
+  prepend Bar::Baz[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (members
+        (member
+          (prepend_member
+            (class_name
+              (namespace))
+            (type_arguments
+              (type
+                (namespaceable_type
+                  (class_name))))))))))
