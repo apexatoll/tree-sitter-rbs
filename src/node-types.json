@@ -143,6 +143,14 @@
         {
           "type": "module_type_parameters",
           "named": true
+        },
+        {
+          "type": "superclass",
+          "named": true
+        },
+        {
+          "type": "type_arguments",
+          "named": true
         }
       ]
     }
@@ -998,6 +1006,21 @@
     "type": "string_literal",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "superclass",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "namespace",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "symbol_literal",
