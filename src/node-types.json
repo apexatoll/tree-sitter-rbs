@@ -70,6 +70,25 @@
     "fields": {}
   },
   {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "builtin_type",
     "named": true,
     "fields": {}
@@ -431,6 +450,29 @@
     "fields": {}
   },
   {
+    "type": "method_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "module_declaration",
     "named": true,
     "fields": {},
@@ -596,6 +638,41 @@
         },
         {
           "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "double_splat_parameter",
+          "named": true
+        },
+        {
+          "type": "keyword_parameter",
+          "named": true
+        },
+        {
+          "type": "optional_keyword_parameter",
+          "named": true
+        },
+        {
+          "type": "optional_parameter",
+          "named": true
+        },
+        {
+          "type": "parameter",
+          "named": true
+        },
+        {
+          "type": "splat_parameter",
           "named": true
         }
       ]
@@ -780,6 +857,10 @@
     "named": false
   },
   {
+    "type": "->",
+    "named": false
+  },
+  {
     "type": ":",
     "named": false
   },
@@ -789,6 +870,10 @@
   },
   {
     "type": "?",
+    "named": false
+  },
+  {
+    "type": "?{",
     "named": false
   },
   {
@@ -880,6 +965,10 @@
     "named": false
   },
   {
+    "type": "supertype",
+    "named": true
+  },
+  {
     "type": "top",
     "named": false
   },
@@ -900,7 +989,15 @@
     "named": false
   },
   {
+    "type": "{",
+    "named": false
+  },
+  {
     "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]

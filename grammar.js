@@ -192,6 +192,32 @@ module.exports = grammar({
       "attr_accessor"
     ),
 
+    method_types: $ => seq(
+      $.method_type,
+      repeat(seq("|", choice($.method_type, $.supertype)))
+    ),
+
+    // Higher precedence than union types
+    method_type: $ => prec(1,
+      // $.method_type_parameters,
+      seq(
+        optional($.parameters),
+        optional($.block),
+        "->",
+        $.type
+      ),
+    ),
+
+    block: $ => seq(
+      choice("?{", "{"),
+      optional($.parameters),
+      "->",
+      $.type,
+      "}",
+    ),
+
+    supertype: $ => token("..."),
+
     parameters: $ => seq(
       "(",
       list(
