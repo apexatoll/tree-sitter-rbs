@@ -204,3 +204,66 @@ end
         (bound_type
           (type_variable)
           (class_name))))))
+
+================================================================================
+Interface with method member
+================================================================================
+
+interface _Foobar
+  def foobar: -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (interface_members
+        (interface_member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Interface with alias member
+================================================================================
+
+interface _Foobar
+  alias foo bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (interface_members
+        (interface_member
+          (alias_member
+            (method_name)
+            (method_name)))))))
+
+================================================================================
+Interface with include member
+================================================================================
+
+interface _Foobar
+  include Enumerable
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (interface_members
+        (interface_member
+          (include_member
+            (class_name)))))))

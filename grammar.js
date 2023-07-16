@@ -76,7 +76,7 @@ module.exports = grammar({
       "interface",
       $.interface_name,
       optional($.module_type_parameters),
-      // $.interface_members,
+      optional($.interface_members),
       "end"
     ),
 
@@ -116,6 +116,8 @@ module.exports = grammar({
 
     members: $ => repeat1($.member),
 
+    interface_members: $ => repeat1($.interface_member),
+
     member: $ => choice(
       $.ivar_member,
       $.method_member,
@@ -125,6 +127,12 @@ module.exports = grammar({
       $.prepend_member,
       $.alias_member,
       $.visibility_member
+    ),
+
+    interface_member: $ => choice(
+      $.method_member,
+      $.include_member,
+      $.alias_member
     ),
 
     ivar_member: $ => seq(
