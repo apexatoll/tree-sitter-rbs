@@ -58,9 +58,18 @@ module.exports = grammar({
       "module",
       alias($.class_name, $.module_name),
       optional($.module_type_parameters),
-      // : $.module_self_types,
+      optional($.module_reference),
       optional($.members),
       "end"
+    ),
+
+    module_reference: $ => seq(":", $._module_self_types),
+
+    _module_self_types: $ => list1(
+      seq(
+        choice($.class_name, $.interface_name),
+        optional($.type_arguments),
+      )
     ),
 
     interface_declaration: $ => seq(

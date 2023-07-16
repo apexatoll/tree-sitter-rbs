@@ -644,6 +644,10 @@
           "named": true
         },
         {
+          "type": "module_reference",
+          "named": true
+        },
+        {
           "type": "module_type_parameters",
           "named": true
         }
@@ -679,6 +683,29 @@
       "types": [
         {
           "type": "namespace",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "class_name",
+          "named": true
+        },
+        {
+          "type": "interface_name",
+          "named": true
+        },
+        {
+          "type": "type_arguments",
           "named": true
         }
       ]
