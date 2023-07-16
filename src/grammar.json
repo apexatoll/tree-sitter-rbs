@@ -876,6 +876,52 @@
         }
       ]
     },
+    "attribute_type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "attr_reader"
+        },
+        {
+          "type": "STRING",
+          "value": "attr_writer"
+        },
+        {
+          "type": "STRING",
+          "value": "attr_accessor"
+        }
+      ]
+    },
+    "type_variable": {
+      "type": "SYMBOL",
+      "name": "_constant"
+    },
+    "var_name": {
+      "type": "SYMBOL",
+      "name": "_var"
+    },
+    "ivar_name": {
+      "type": "SYMBOL",
+      "name": "_ivar"
+    },
+    "method_name": {
+      "type": "SYMBOL",
+      "name": "_method"
+    },
+    "singleton_method_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "self."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_method"
+        }
+      ]
+    },
     "alias_name": {
       "type": "SEQ",
       "members": [
@@ -918,10 +964,6 @@
         }
       ]
     },
-    "type_variable": {
-      "type": "SYMBOL",
-      "name": "_constant"
-    },
     "interface_name": {
       "type": "SEQ",
       "members": [
@@ -942,14 +984,6 @@
           "name": "_interface"
         }
       ]
-    },
-    "ivar_name": {
-      "type": "SYMBOL",
-      "name": "_ivar"
-    },
-    "var_name": {
-      "type": "SYMBOL",
-      "name": "_var"
     },
     "namespace": {
       "type": "CHOICE",
@@ -982,40 +1016,6 @@
               "name": "_scope"
             }
           ]
-        }
-      ]
-    },
-    "method_name": {
-      "type": "SYMBOL",
-      "name": "_method"
-    },
-    "singleton_method_name": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "self."
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_method"
-        }
-      ]
-    },
-    "attribute_type": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "attr_reader"
-        },
-        {
-          "type": "STRING",
-          "value": "attr_writer"
-        },
-        {
-          "type": "STRING",
-          "value": "attr_accessor"
         }
       ]
     },

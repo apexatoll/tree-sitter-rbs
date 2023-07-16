@@ -192,6 +192,25 @@ module.exports = grammar({
       "public"
     ),
 
+    attribute_type: $ => choice(
+      "attr_reader",
+      "attr_writer",
+      "attr_accessor"
+    ),
+
+    type_variable: $ => $._constant,
+
+    var_name: $ => $._var,
+
+    ivar_name: $ => $._ivar,
+
+    method_name: $ => $._method,
+
+    singleton_method_name: $ => seq(
+      "self.",
+      $._method,
+    ),
+
     alias_name: $ => seq(
       optional($.namespace),
       $._alias
@@ -202,33 +221,14 @@ module.exports = grammar({
       $._constant
     ),
 
-    type_variable: $ => $._constant,
-
     interface_name: $ => seq(
       optional($.namespace),
       $._interface
     ),
 
-    ivar_name: $ => $._ivar,
-
-    var_name: $ => $._var,
-
     namespace: $ => choice(
       $._scope,
       seq(optional($.namespace), $._constant, $._scope)
-    ),
-
-    method_name: $ => $._method,
-
-    singleton_method_name: $ => seq(
-      "self.",
-      $._method,
-    ),
-
-    attribute_type: $ => choice(
-      "attr_reader",
-      "attr_writer",
-      "attr_accessor"
     ),
 
     instance_method: $ => seq(
@@ -409,11 +409,7 @@ module.exports = grammar({
     
     record_type: $ => seq(
       "{",
-      list(
-        seq(
-          alias($.var_name, $.key), ":", $.type
-        )
-      ),
+      list(seq(alias($.var_name, $.key), ":", $.type)),
       "}"
     ),
 
