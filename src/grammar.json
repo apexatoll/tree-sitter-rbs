@@ -1152,6 +1152,10 @@
         {
           "type": "SYMBOL",
           "name": "false_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_singleton_type"
         }
       ]
     },
@@ -1293,6 +1297,23 @@
             "type": "STRING",
             "value": "?"
           }
+        }
+      ]
+    },
+    "class_singleton_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "singleton("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_name"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     }

@@ -333,7 +333,8 @@ module.exports = grammar({
       $.symbol_literal,
       alias($._integer, $.integer_literal),
       $.true_literal,
-      $.false_literal
+      $.false_literal,
+      $.class_singleton_type
     ),
 
     operator_type: $ => choice(
@@ -374,11 +375,9 @@ module.exports = grammar({
       $.type, token.immediate("?")
     ),
 
-    // class_singleton_type: $ => seq(
-    //   "singleton(",
-    //   $.class_name,
-    //   ")",
-    // ),
+    class_singleton_type: $ => seq(
+      "singleton(", $.class_name, ")",
+    ),
     
     // record_type: $ => seq(
     //   "{"
