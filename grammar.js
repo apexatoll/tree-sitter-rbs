@@ -254,3 +254,13 @@ module.exports = grammar({
     )
   }
 })
+
+function list(...rules) {
+  return optional(list1(...rules))
+}
+
+function list1(...rules) {
+  rules = choice(...rules)
+
+  return seq(rules, repeat(seq(",", rules)))
+}
