@@ -12,19 +12,18 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single method type with required block
@@ -40,22 +39,21 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (block
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
                   (type
-                    (builtin_type)))
+                    (namespaceable_type
+                      (class_name)))))
+              (block
                 (type
-                  (builtin_type))))))))))
+                  (builtin_type)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single method type with required block with parameters
@@ -71,27 +69,26 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (block
                 (parameters
                   (parameter
                     (type
                       (namespaceable_type
                         (class_name)))))
-                (block
-                  (parameters
-                    (parameter
-                      (type
-                        (namespaceable_type
-                          (class_name)))))
-                  (type
-                    (builtin_type)))
                 (type
-                  (builtin_type))))))))))
+                  (builtin_type)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single method type with optional block
@@ -107,22 +104,21 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (block
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
                   (type
-                    (builtin_type)))
+                    (namespaceable_type
+                      (class_name)))))
+              (block
                 (type
-                  (builtin_type))))))))))
+                  (builtin_type)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single method type with optional block with parameters
@@ -138,27 +134,26 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (block
                 (parameters
                   (parameter
                     (type
                       (namespaceable_type
                         (class_name)))))
-                (block
-                  (parameters
-                    (parameter
-                      (type
-                        (namespaceable_type
-                          (class_name)))))
-                  (type
-                    (builtin_type)))
                 (type
-                  (builtin_type))))))))))
+                  (builtin_type)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Multiple method types
@@ -175,30 +170,29 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (block
                 (type
                   (builtin_type)))
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (block
-                  (type
-                    (builtin_type)))
-                (type
-                  (builtin_type))))))))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Multiple method types with supertype
@@ -216,28 +210,27 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type)))
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type)))
-              (supertype))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))
+            (supertype)))))))
 
 ================================================================================
 Single method type with type parameters
@@ -253,21 +246,20 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (method_type_parameters
-                  (type_variable))
-                (type
-                  (namespaceable_type
-                    (class_name)
-                    (type_arguments
-                      (type
-                        (namespaceable_type
-                          (class_name))))))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (method_type_parameters
+                (type_variable))
+              (type
+                (namespaceable_type
+                  (class_name)
+                  (type_arguments
+                    (type
+                      (namespaceable_type
+                        (class_name)))))))))))))
 
 ================================================================================
 Single method type with bound type parameters
@@ -283,20 +275,19 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (method_type_parameters
-                  (bound_type
-                    (type_variable)
-                    (class_name)))
-                (type
-                  (namespaceable_type
-                    (class_name)
-                    (type_arguments
-                      (type
-                        (namespaceable_type
-                          (class_name))))))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (method_type_parameters
+                (bound_type
+                  (type_variable)
+                  (class_name)))
+              (type
+                (namespaceable_type
+                  (class_name)
+                  (type_arguments
+                    (type
+                      (namespaceable_type
+                        (class_name)))))))))))))

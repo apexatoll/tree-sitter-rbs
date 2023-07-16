@@ -528,17 +528,17 @@
       "type": "REPEAT1",
       "content": {
         "type": "SYMBOL",
-        "name": "member"
+        "name": "_member"
       }
     },
     "interface_members": {
       "type": "REPEAT1",
       "content": {
         "type": "SYMBOL",
-        "name": "interface_member"
+        "name": "_interface_member"
       }
     },
-    "member": {
+    "_member": {
       "type": "CHOICE",
       "members": [
         {
@@ -575,7 +575,7 @@
         }
       ]
     },
-    "interface_member": {
+    "_interface_member": {
       "type": "CHOICE",
       "members": [
         {

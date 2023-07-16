@@ -12,15 +12,14 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters)
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters)
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single required parameter
@@ -36,19 +35,18 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single required parameter with alias
@@ -64,20 +62,19 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))
-                    (var_name)))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (var_name)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single optional parameter
@@ -93,19 +90,18 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (optional_parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (optional_parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Single optional parameter with alias
@@ -121,20 +117,19 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (optional_parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))
-                    (var_name)))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (optional_parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (var_name)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Splat parameter
@@ -150,19 +145,18 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (splat_parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (splat_parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Splat parameter with alias
@@ -178,20 +172,19 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (splat_parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))
-                    (var_name)))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (splat_parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (var_name)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Mixed positional parameters
@@ -207,30 +200,29 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))
-                    (var_name))
-                  (optional_parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))
-                    (var_name))
-                  (splat_parameter
-                    (type
-                      (namespaceable_type
-                        (class_name)))
-                    (var_name)))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (var_name))
+                (optional_parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (var_name))
+                (splat_parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (var_name)))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Required keyword parameters
@@ -246,25 +238,24 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Optional keyword parameters
@@ -280,25 +271,24 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (optional_keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (optional_keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name)))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (optional_keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (optional_keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Double splat parameter
@@ -314,18 +304,17 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (double_splat_parameter
-                    (type
-                      (builtin_type))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (double_splat_parameter
+                  (type
+                    (builtin_type))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Mixed keyword parameters
@@ -341,28 +330,27 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (optional_keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (double_splat_parameter
-                    (type
-                      (builtin_type))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (optional_keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (double_splat_parameter
+                  (type
+                    (builtin_type))))
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Mixed parameters
@@ -378,29 +366,28 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (parameters
-                  (parameter
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (optional_keyword_parameter
-                    (key)
-                    (type
-                      (namespaceable_type
-                        (class_name))))
-                  (double_splat_parameter
-                    (type
-                      (builtin_type))))
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (optional_keyword_parameter
+                  (key)
+                  (type
+                    (namespaceable_type
+                      (class_name))))
+                (double_splat_parameter
+                  (type
+                    (builtin_type))))
+              (type
+                (builtin_type)))))))))

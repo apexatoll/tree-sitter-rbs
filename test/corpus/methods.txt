@@ -12,14 +12,13 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Instance method definition with visiblity
@@ -35,15 +34,14 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (visibility)
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (visibility)
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Singleton method definition
@@ -59,14 +57,13 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (singleton_method
-            (method_name)
-            (method_signatures
-              (signature
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (singleton_method
+          (method_name)
+          (method_signatures
+            (signature
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Singleton method definition with visiblity
@@ -82,15 +79,14 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (visibility)
-          (singleton_method
-            (method_name)
-            (method_signatures
-              (signature
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (visibility)
+        (singleton_method
+          (method_name)
+          (method_signatures
+            (signature
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Module function definition
@@ -106,11 +102,10 @@ end
   (module_declaration
     (module_name)
     (members
-      (member
-        (method_member
-          (module_function
-            (method_name)
-            (method_signatures
-              (signature
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (module_function
+          (method_name)
+          (method_signatures
+            (signature
+              (type
+                (builtin_type)))))))))

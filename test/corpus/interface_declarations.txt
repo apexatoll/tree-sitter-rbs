@@ -208,14 +208,13 @@ end
   (interface_declaration
     (interface_name)
     (interface_members
-      (interface_member
-        (method_member
-          (instance_method
-            (method_name)
-            (method_signatures
-              (signature
-                (type
-                  (builtin_type))))))))))
+      (method_member
+        (instance_method
+          (method_name)
+          (method_signatures
+            (signature
+              (type
+                (builtin_type)))))))))
 
 ================================================================================
 Interface with alias member
@@ -231,10 +230,9 @@ end
   (interface_declaration
     (interface_name)
     (interface_members
-      (interface_member
-        (alias_member
-          (method_name)
-          (method_name))))))
+      (alias_member
+        (method_name)
+        (method_name)))))
 
 ================================================================================
 Interface with include member
@@ -250,6 +248,5 @@ end
   (interface_declaration
     (interface_name)
     (interface_members
-      (interface_member
-        (include_member
-          (class_name))))))
+      (include_member
+        (class_name)))))

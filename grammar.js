@@ -107,11 +107,11 @@ module.exports = grammar({
       )),
     ),
 
-    members: $ => repeat1($.member),
+    members: $ => repeat1($._member),
 
-    interface_members: $ => repeat1($.interface_member),
+    interface_members: $ => repeat1($._interface_member),
 
-    member: $ => choice(
+    _member: $ => choice(
       $.ivar_member,
       $.method_member,
       $.attribute_member,
@@ -122,7 +122,7 @@ module.exports = grammar({
       $.visibility_member
     ),
 
-    interface_member: $ => choice(
+    _interface_member: $ => choice(
       $.method_member,
       $.include_member,
       $.alias_member
