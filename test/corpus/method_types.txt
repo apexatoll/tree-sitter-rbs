@@ -245,3 +245,67 @@ end
                   (type
                     (builtin_type)))
                 (supertype)))))))))
+
+================================================================================
+Single method type with type parameters
+================================================================================
+
+module Test
+  def foobar: [T] -> Array[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (method_type_parameters
+                    (type_variable))
+                  (type
+                    (namespaceable_type
+                      (class_name)
+                      (type_arguments
+                        (type
+                          (namespaceable_type
+                            (class_name)))))))))))))))
+
+================================================================================
+Single method type with bound type parameters
+================================================================================
+
+module Test
+  def foobar: [T < String] -> Array[T]
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (method_type_parameters
+                    (bound_type
+                      (type_variable)
+                      (class_name)))
+                  (type
+                    (namespaceable_type
+                      (class_name)
+                      (type_arguments
+                        (type
+                          (namespaceable_type
+                            (class_name)))))))))))))))

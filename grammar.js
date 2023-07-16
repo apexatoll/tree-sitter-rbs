@@ -264,16 +264,18 @@ module.exports = grammar({
       repeat(seq("|", choice($.method_type, $.supertype)))
     ),
 
-    // Higher precedence than union types
-    method_type: $ => prec(1,
-      // $.method_type_parameters,
-      seq(
-        optional($.parameters),
-        optional($.block),
-        "->",
-        $.type
-      ),
+    method_type_parameters: $ => seq(
+      "[", list1($.type_variable, $.bound_type), "]"
     ),
+
+    // Higher precedence than union types
+    method_type: $ => prec(1, seq(
+      optional($.method_type_parameters),
+      optional($.parameters),
+      optional($.block),
+      "->",
+      $.type
+    )),
 
     block: $ => seq(
       choice("?{", "{"),
