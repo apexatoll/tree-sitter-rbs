@@ -9,9 +9,8 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name))))
+  (class_declaration
+    (class_name)))
 
 ================================================================================
 Empty class with nested syntax
@@ -24,10 +23,9 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name
-        (namespace)))))
+  (class_declaration
+    (class_name
+      (namespace))))
 
 ================================================================================
 Empty class with deeply nested syntax
@@ -40,11 +38,10 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name
-        (namespace
-          (namespace))))))
+  (class_declaration
+    (class_name
+      (namespace
+        (namespace)))))
 
 ================================================================================
 Empty generic class
@@ -57,11 +54,10 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (type_variable)))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (type_variable))))
 
 ================================================================================
 Empty generic class with bound type
@@ -74,13 +70,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty covariant class
@@ -93,12 +88,11 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (variance)
-        (type_variable)))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty contravariant class
@@ -111,12 +105,11 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (variance)
-        (type_variable)))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty covariant class with bound type
@@ -129,14 +122,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty contravariant class with bound type
@@ -149,14 +141,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty unchecked covariant class
@@ -169,13 +160,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (type_variable)))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty unchecked contravariant class
@@ -188,13 +178,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (type_variable)))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty unchecked covariant class with bound type
@@ -207,15 +196,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty unchecked contravariant class with bound type
@@ -228,15 +216,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (class_declaration
+    (class_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty class with superclass
@@ -248,11 +235,10 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (superclass
-        (class_name)))))
+  (class_declaration
+    (class_name)
+    (superclass
+      (class_name))))
 
 ================================================================================
 Empty class with generic superclass
@@ -265,12 +251,11 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
+  (class_declaration
+    (class_name)
+    (superclass
       (class_name)
-      (superclass
-        (class_name)
-        (type_arguments
-          (type
-            (namespaceable_type
-              (class_name))))))))
+      (type_arguments
+        (type
+          (namespaceable_type
+            (class_name)))))))

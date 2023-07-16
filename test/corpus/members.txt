@@ -9,15 +9,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (ivar_member
-            (ivar_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (ivar_member
+          (ivar_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 Alias member
@@ -30,14 +29,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (alias_member
-            (method_name)
-            (method_name)))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (alias_member
+          (method_name)
+          (method_name))))))
 
 ================================================================================
 Singleton alias member
@@ -50,14 +48,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (alias_member
-            (singleton_method_name)
-            (singleton_method_name)))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (alias_member
+          (singleton_method_name)
+          (singleton_method_name))))))
 
 ================================================================================
 Public visibility member
@@ -70,13 +67,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (visibility_member
-            (visibility)))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (visibility_member
+          (visibility))))))
 
 ================================================================================
 Private visibility member
@@ -89,13 +85,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (visibility_member
-            (visibility)))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (visibility_member
+          (visibility))))))
 
 ================================================================================
 attr_reader
@@ -108,16 +103,15 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_reader with ivar name
@@ -130,17 +124,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (ivar_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (ivar_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_reader with no ivar
@@ -153,16 +146,15 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_writer
@@ -175,16 +167,15 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_writer with ivar name
@@ -197,17 +188,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (ivar_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (ivar_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_writer with no ivar
@@ -220,16 +210,15 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_accessor
@@ -242,16 +231,15 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_accessor with ivar name
@@ -264,17 +252,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (ivar_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (ivar_name)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 attr_accessor with no ivar
@@ -287,13 +274,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (members
-        (member
-          (attribute_member
-            (attribute_type)
-            (method_name)
-            (type
-              (builtin_type))))))))
+  (module_declaration
+    (module_name)
+    (members
+      (member
+        (attribute_member
+          (attribute_type)
+          (method_name)
+          (type
+            (builtin_type)))))))

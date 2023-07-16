@@ -5,7 +5,7 @@
       "type": "REPEAT",
       "content": {
         "type": "SYMBOL",
-        "name": "declaration"
+        "name": "_declaration"
       }
     },
     "_alias": {
@@ -77,7 +77,7 @@
         }
       ]
     },
-    "declaration": {
+    "_declaration": {
       "type": "CHOICE",
       "members": [
         {

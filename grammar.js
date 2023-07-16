@@ -2,9 +2,7 @@ module.exports = grammar({
   name: "rbs",
 
   rules: {
-    program: $ => repeat(
-      $.declaration
-    ),
+    program: $ => repeat($._declaration),
 
     _alias: $ => /[a-z]\w*/,
 
@@ -32,7 +30,7 @@ module.exports = grammar({
 
     _variance: $ => choice("in", "out"),
 
-    declaration: $ => choice(
+    _declaration: $ => choice(
       $.class_declaration,
       $.module_declaration,
       $.interface_declaration,

@@ -7,11 +7,10 @@ TEST: top
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 bot
@@ -22,11 +21,10 @@ TEST: bot
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 self
@@ -37,11 +35,10 @@ TEST: self
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 instance
@@ -52,11 +49,10 @@ TEST: instance
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 class
@@ -65,11 +61,10 @@ TEST: class
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 nil
@@ -80,11 +75,10 @@ TEST: nil
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 bool
@@ -95,11 +89,10 @@ TEST: bool
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 void
@@ -110,11 +103,10 @@ TEST: void
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 untyped
@@ -125,11 +117,10 @@ TEST: untyped
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (builtin_type)))))
+  (constant_declaration
+    (constant)
+    (type
+      (builtin_type))))
 
 ================================================================================
 Empty double quoted string
@@ -140,12 +131,11 @@ TEST: ""
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (string_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (string_literal)))))
 
 ================================================================================
 Double quoted string
@@ -156,12 +146,11 @@ TEST: "Hello world 12345"
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (string_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (string_literal)))))
 
 ================================================================================
 Empty single quoted string
@@ -172,12 +161,11 @@ TEST: ''
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (string_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (string_literal)))))
 
 ================================================================================
 Single quoted string
@@ -188,12 +176,11 @@ TEST: 'Hello world 12345'
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (string_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (string_literal)))))
 
 ================================================================================
 Simple symbol
@@ -204,12 +191,11 @@ TEST: :hello_world
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (symbol_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (symbol_literal)))))
 
 ================================================================================
 Delimited single quoted symbol
@@ -220,12 +206,11 @@ TEST: :'hello_world'
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (symbol_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (symbol_literal)))))
 
 ================================================================================
 Delimited double quoted symbol
@@ -236,12 +221,11 @@ TEST: :"hello_world"
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (symbol_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (symbol_literal)))))
 
 ================================================================================
 Integer
@@ -252,12 +236,11 @@ TEST: 999
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (integer_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (integer_literal)))))
 
 ================================================================================
 Integer with underscore
@@ -268,12 +251,11 @@ TEST: 1_000
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (integer_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (integer_literal)))))
 
 ================================================================================
 true
@@ -284,12 +266,11 @@ TEST: true
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (true_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (true_literal)))))
 
 ================================================================================
 false
@@ -300,12 +281,11 @@ TEST: false
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (false_literal))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (false_literal)))))
 
 ================================================================================
 Class singleton type
@@ -316,13 +296,12 @@ TEST: singleton(Foobar)
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (class_singleton_type
-            (class_name)))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (class_singleton_type
+          (class_name))))))
 
 ================================================================================
 Empty record type
@@ -333,12 +312,11 @@ TEST: {}
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (record_type))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (record_type)))))
 
 ================================================================================
 Record type
@@ -349,20 +327,19 @@ TEST: { foo: String, bar: Integer }
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (record_type
-            (key)
-            (type
-              (namespaceable_type
-                (class_name)))
-            (key)
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (record_type
+          (key)
+          (type
+            (namespaceable_type
+              (class_name)))
+          (key)
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Empty tuple type
@@ -373,12 +350,11 @@ TEST: []
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (tuple_type))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (tuple_type)))))
 
 ================================================================================
 Tuple type
@@ -389,18 +365,17 @@ TEST: [String, Integer]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (tuple_type
-            (type
-              (namespaceable_type
-                (class_name)))
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (tuple_type
+          (type
+            (namespaceable_type
+              (class_name)))
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Proc type with no parameters
@@ -411,15 +386,14 @@ TEST: ^() -> untyped
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (proc_type
-            (parameters)
-            (type
-              (builtin_type))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (proc_type
+          (parameters)
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 Proc type with parameters
@@ -430,19 +404,18 @@ TEST: ^(String) -> untyped
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (literal_type
-          (proc_type
-            (parameters
-              (parameter
-                (type
-                  (namespaceable_type
-                    (class_name)))))
-            (type
-              (builtin_type))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (literal_type
+        (proc_type
+          (parameters
+            (parameter
+              (type
+                (namespaceable_type
+                  (class_name)))))
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 Single union
@@ -453,16 +426,15 @@ TEST: bool | nil
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (operator_type
-          (union_type
-            (type
-              (builtin_type))
-            (type
-              (builtin_type))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (operator_type
+        (union_type
+          (type
+            (builtin_type))
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 Multiple unions
@@ -473,21 +445,20 @@ TEST: bool | instance | nil
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (operator_type
-          (union_type
-            (type
-              (builtin_type))
-            (type
-              (operator_type
-                (union_type
-                  (type
-                    (builtin_type))
-                  (type
-                    (builtin_type)))))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (operator_type
+        (union_type
+          (type
+            (builtin_type))
+          (type
+            (operator_type
+              (union_type
+                (type
+                  (builtin_type))
+                (type
+                  (builtin_type))))))))))
 
 ================================================================================
 Single intersection
@@ -498,16 +469,15 @@ TEST: bool & nil
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (operator_type
-          (intersection_type
-            (type
-              (builtin_type))
-            (type
-              (builtin_type))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (operator_type
+        (intersection_type
+          (type
+            (builtin_type))
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 Multiple intersections
@@ -518,21 +488,20 @@ TEST: bool & instance & nil
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (operator_type
-          (intersection_type
-            (type
-              (builtin_type))
-            (type
-              (operator_type
-                (intersection_type
-                  (type
-                    (builtin_type))
-                  (type
-                    (builtin_type)))))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (operator_type
+        (intersection_type
+          (type
+            (builtin_type))
+          (type
+            (operator_type
+              (intersection_type
+                (type
+                  (builtin_type))
+                (type
+                  (builtin_type))))))))))
 
 ================================================================================
 Optional type
@@ -543,14 +512,13 @@ TEST: bool?
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (operator_type
-          (optional_type
-            (type
-              (builtin_type))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (operator_type
+        (optional_type
+          (type
+            (builtin_type)))))))
 
 ================================================================================
 Class name type
@@ -561,12 +529,11 @@ TEST: Foobar
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (class_name))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (class_name)))))
 
 ================================================================================
 Class name with type arguments
@@ -577,16 +544,15 @@ TEST: Collection[String]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (class_name)
-          (type_arguments
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (class_name)
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Nested class name type
@@ -597,13 +563,12 @@ TEST: Foobar::Baz
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (class_name
-            (namespace)))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (class_name
+          (namespace))))))
 
 ================================================================================
 Nested class name with type arguments
@@ -614,20 +579,19 @@ TEST: Foobar::Collection[String, Integer]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (class_name
-            (namespace))
-          (type_arguments
-            (type
-              (namespaceable_type
-                (class_name)))
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (class_name
+          (namespace))
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name)))
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Interface name type
@@ -638,12 +602,11 @@ TEST: _Foobar
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (interface_name))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (interface_name)))))
 
 ================================================================================
 Interface name with type arguments
@@ -654,16 +617,15 @@ TEST: _Foobar[T]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (interface_name)
-          (type_arguments
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (interface_name)
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Nested interface name type
@@ -674,13 +636,12 @@ TEST: Foobar::_Baz
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (interface_name
-            (namespace)))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (interface_name
+          (namespace))))))
 
 ================================================================================
 Nested interface name with type arguments
@@ -691,17 +652,16 @@ TEST: Foobar::_Baz[Integer]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (interface_name
-            (namespace))
-          (type_arguments
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (interface_name
+          (namespace))
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Alias name type
@@ -712,12 +672,11 @@ TEST: foobar
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (alias_name))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (alias_name)))))
 
 ================================================================================
 Alias name with type arguments
@@ -728,16 +687,15 @@ TEST: foobar[T]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (alias_name)
-          (type_arguments
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (alias_name)
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name))))))))
 
 ================================================================================
 Nested alias name type
@@ -748,13 +706,12 @@ TEST: Foobar::baz
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (alias_name
-            (namespace)))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (alias_name
+          (namespace))))))
 
 ================================================================================
 Nested alias name with type arguments
@@ -765,14 +722,13 @@ TEST: Foobar::baz[T]
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (constant_declaration
-      (constant)
-      (type
-        (namespaceable_type
-          (alias_name
-            (namespace))
-          (type_arguments
-            (type
-              (namespaceable_type
-                (class_name)))))))))
+  (constant_declaration
+    (constant)
+    (type
+      (namespaceable_type
+        (alias_name
+          (namespace))
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name))))))))

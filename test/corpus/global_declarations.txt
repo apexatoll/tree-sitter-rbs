@@ -7,11 +7,10 @@ $foobar: untyped
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (global_declaration
-      (global)
-      (type
-        (builtin_type)))))
+  (global_declaration
+    (global)
+    (type
+      (builtin_type))))
 
 ================================================================================
 Capitalized global declaration
@@ -22,8 +21,7 @@ $FOOBAR: untyped
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (global_declaration
-      (global)
-      (type
-        (builtin_type)))))
+  (global_declaration
+    (global)
+    (type
+      (builtin_type))))

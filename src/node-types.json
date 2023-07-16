@@ -201,41 +201,6 @@
     }
   },
   {
-    "type": "declaration",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "class_declaration",
-          "named": true
-        },
-        {
-          "type": "constant_declaration",
-          "named": true
-        },
-        {
-          "type": "global_declaration",
-          "named": true
-        },
-        {
-          "type": "interface_declaration",
-          "named": true
-        },
-        {
-          "type": "module_declaration",
-          "named": true
-        },
-        {
-          "type": "type_alias_declaration",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "double_splat_parameter",
     "named": true,
     "fields": {},
@@ -1022,7 +987,27 @@
       "required": false,
       "types": [
         {
-          "type": "declaration",
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "constant_declaration",
+          "named": true
+        },
+        {
+          "type": "global_declaration",
+          "named": true
+        },
+        {
+          "type": "interface_declaration",
+          "named": true
+        },
+        {
+          "type": "module_declaration",
+          "named": true
+        },
+        {
+          "type": "type_alias_declaration",
           "named": true
         }
       ]

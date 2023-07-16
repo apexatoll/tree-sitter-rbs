@@ -9,9 +9,8 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name))))
+  (module_declaration
+    (module_name)))
 
 ================================================================================
 Empty module with nested syntax
@@ -24,10 +23,9 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name
-        (namespace)))))
+  (module_declaration
+    (module_name
+      (namespace))))
 
 ================================================================================
 Empty module with deeply nested syntax
@@ -40,11 +38,10 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name
-        (namespace
-          (namespace))))))
+  (module_declaration
+    (module_name
+      (namespace
+        (namespace)))))
 
 ================================================================================
 Empty generic module
@@ -57,11 +54,10 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (type_variable)))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (type_variable))))
 
 ================================================================================
 Empty generic module with bound type
@@ -74,13 +70,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty covariant module
@@ -93,12 +88,11 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (variance)
-        (type_variable)))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty contravariant module
@@ -111,12 +105,11 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (variance)
-        (type_variable)))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty covariant module with bound type
@@ -129,14 +122,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty contravariant module with bound type
@@ -149,14 +141,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty unchecked covariant module
@@ -169,13 +160,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (type_variable)))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty unchecked contravariant module
@@ -188,13 +178,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (type_variable)))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (type_variable))))
 
 ================================================================================
 Empty unchecked covariant module with bound type
@@ -207,15 +196,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty unchecked contravariant module with bound type
@@ -228,15 +216,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_type_parameters
-        (unchecked)
-        (variance)
-        (bound_type
-          (type_variable)
-          (class_name))))))
+  (module_declaration
+    (module_name)
+    (module_type_parameters
+      (unchecked)
+      (variance)
+      (bound_type
+        (type_variable)
+        (class_name)))))
 
 ================================================================================
 Empty module with class reference
@@ -249,15 +236,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_reference
-        (class_name)
-        (type_arguments
-          (type
-            (namespaceable_type
-              (class_name))))))))
+  (module_declaration
+    (module_name)
+    (module_reference
+      (class_name)
+      (type_arguments
+        (type
+          (namespaceable_type
+            (class_name)))))))
 
 ================================================================================
 Empty module with nested class reference
@@ -270,13 +256,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (module_declaration
-      (module_name)
-      (module_reference
-        (class_name
-          (namespace))
-        (type_arguments
-          (type
-            (namespaceable_type
-              (class_name))))))))
+  (module_declaration
+    (module_name)
+    (module_reference
+      (class_name
+        (namespace))
+      (type_arguments
+        (type
+          (namespaceable_type
+            (class_name)))))))

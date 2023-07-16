@@ -9,13 +9,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (class_name)))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (class_name))))))
 
 ================================================================================
 Including a flat class with type arguments
@@ -28,17 +27,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (class_name)
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (class_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Including a nested class
@@ -51,14 +49,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (class_name
-              (namespace))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (class_name
+            (namespace)))))))
 
 ================================================================================
 Including a nested class with type arguments
@@ -71,18 +68,17 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (class_name
-              (namespace))
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (class_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Including a flat interface
@@ -95,13 +91,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (interface_name)))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (interface_name))))))
 
 ================================================================================
 Including a flat interface with type arguments
@@ -114,17 +109,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (interface_name)
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (interface_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Including a nested interface
@@ -137,14 +131,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (interface_name
-              (namespace))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (interface_name
+            (namespace)))))))
 
 ================================================================================
 Including a nested interface with type arguments
@@ -157,18 +150,17 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (include_member
-            (interface_name
-              (namespace))
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (include_member
+          (interface_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Extending a flat class
@@ -181,13 +173,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (class_name)))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (class_name))))))
 
 ================================================================================
 Extending a flat class with type arguments
@@ -200,17 +191,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (class_name)
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (class_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Extending a nested class
@@ -223,14 +213,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (class_name
-              (namespace))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (class_name
+            (namespace)))))))
 
 ================================================================================
 Extending a nested class with type arguments
@@ -243,18 +232,17 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (class_name
-              (namespace))
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (class_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Extending a flat interface
@@ -267,13 +255,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (interface_name)))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (interface_name))))))
 
 ================================================================================
 Extending a flat interface with type arguments
@@ -286,17 +273,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (interface_name)
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (interface_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Extending a nested interface
@@ -309,14 +295,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (interface_name
-              (namespace))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (interface_name
+            (namespace)))))))
 
 ================================================================================
 Extending a nested interface with type arguments
@@ -329,18 +314,17 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (extend_member
-            (interface_name
-              (namespace))
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (extend_member
+          (interface_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Prepending a flat class
@@ -353,13 +337,12 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (prepend_member
-            (class_name)))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (prepend_member
+          (class_name))))))
 
 ================================================================================
 Prepending a flat class with type arguments
@@ -372,17 +355,16 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (prepend_member
-            (class_name)
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (prepend_member
+          (class_name)
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
 
 ================================================================================
 Prepending a nested class
@@ -395,14 +377,13 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (prepend_member
-            (class_name
-              (namespace))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (prepend_member
+          (class_name
+            (namespace)))))))
 
 ================================================================================
 Prepending a nested class with type arguments
@@ -415,15 +396,14 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (declaration
-    (class_declaration
-      (class_name)
-      (members
-        (member
-          (prepend_member
-            (class_name
-              (namespace))
-            (type_arguments
-              (type
-                (namespaceable_type
-                  (class_name))))))))))
+  (class_declaration
+    (class_name)
+    (members
+      (member
+        (prepend_member
+          (class_name
+            (namespace))
+          (type_arguments
+            (type
+              (namespaceable_type
+                (class_name)))))))))
