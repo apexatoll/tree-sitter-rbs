@@ -414,6 +414,10 @@
           "named": true
         },
         {
+          "type": "record_type",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -810,6 +814,25 @@
       "types": [
         {
           "type": "declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "type",
           "named": true
         }
       ]

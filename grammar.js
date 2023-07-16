@@ -334,7 +334,8 @@ module.exports = grammar({
       alias($._integer, $.integer_literal),
       $.true_literal,
       $.false_literal,
-      $.class_singleton_type
+      $.class_singleton_type,
+      $.record_type
     ),
 
     operator_type: $ => choice(
@@ -379,14 +380,15 @@ module.exports = grammar({
       "singleton(", $.class_name, ")",
     ),
     
-    // record_type: $ => seq(
-    //   "{"
-    //   list of
-    //     $.record_name,
-    //     ":",
-    //     $.type,
-    //   "}"
-    // ),
+    record_type: $ => seq(
+      "{",
+      list(
+        seq(
+          alias($.var_name, $.key), ":", $.type
+        )
+      ),
+      "}"
+    ),
 
     // tuple_type: $ => seq(
     //   "["
