@@ -26,7 +26,11 @@ module.exports = grammar({
 
     _symbol: $ => /:@?_*[A-Za-z]\w*/,
 
+    _unchecked: $ => seq("unchecked"),
+
     _var: $ => /[a-z]\w*/,
+
+    _variance: $ => choice("in", "out"),
 
     declaration: $ => choice(
       $.class_declaration,
@@ -91,8 +95,8 @@ module.exports = grammar({
 
     module_type_parameters: $ => seq(
       "[", 
-      optional($.unchecked),
-      optional($.variance),
+      optional(alias($._unchecked, $.unchecked)),
+      optional(alias($._variance, $.variance)),
       optional(choice($.type_variable, $.bound_type)),
       "]"
     ),
@@ -104,12 +108,6 @@ module.exports = grammar({
         optional($.type_arguments),
       )),
     ),
-
-    unchecked: $ => seq("unchecked"),
-
-    variance: $ => choice("in", "out"),
-
-    bound: $ => seq("<", $.bound_type),
 
     members: $ => repeat1($.member),
 

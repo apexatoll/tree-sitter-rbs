@@ -51,9 +51,31 @@
       "type": "PATTERN",
       "value": ":@?_*[A-Za-z]\\w*"
     },
+    "_unchecked": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "unchecked"
+        }
+      ]
+    },
     "_var": {
       "type": "PATTERN",
       "value": "[a-z]\\w*"
+    },
+    "_variance": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "in"
+        },
+        {
+          "type": "STRING",
+          "value": "out"
+        }
+      ]
     },
     "declaration": {
       "type": "CHOICE",
@@ -349,8 +371,13 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "unchecked"
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_unchecked"
+              },
+              "named": true,
+              "value": "unchecked"
             },
             {
               "type": "BLANK"
@@ -361,8 +388,13 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "variance"
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_variance"
+              },
+              "named": true,
+              "value": "variance"
             },
             {
               "type": "BLANK"
@@ -489,41 +521,6 @@
               }
             }
           ]
-        }
-      ]
-    },
-    "unchecked": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "unchecked"
-        }
-      ]
-    },
-    "variance": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "in"
-        },
-        {
-          "type": "STRING",
-          "value": "out"
-        }
-      ]
-    },
-    "bound": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "<"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "bound_type"
         }
       ]
     },
