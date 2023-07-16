@@ -26,6 +26,8 @@ module.exports = grammar({
 
     _symbol: $ => /:@?_*[A-Za-z]\w*/,
 
+    _var: $ => /[a-z]\w*/,
+
     declaration: $ => choice(
       $.class_declaration,
       $.module_declaration,
@@ -170,6 +172,8 @@ module.exports = grammar({
 
     ivar_name: $ => $._ivar,
 
+    var_name: $ => $._var,
+
     namespace: $ => choice(
       $._scope,
       seq(optional($.namespace), $._constant, $._scope)
@@ -187,6 +191,45 @@ module.exports = grammar({
       "attr_writer",
       "attr_accessor"
     ),
+
+    parameters: $ => seq(
+      "(",
+      list(
+        $.parameter,
+        $.optional_parameter,
+        $.splat_parameter,
+        $.keyword_parameter,
+        $.optional_keyword_parameter,
+        $.double_splat_parameter
+      ),
+      ")"
+    ),
+
+    _parameter: $ => seq(
+      $.type,
+      optional($.var_name)
+    ),
+
+    parameter: $ => $._parameter,
+
+    optional_parameter: $ => seq("?", $._parameter),
+
+    splat_parameter: $ => seq("*", $._parameter),
+
+    keyword_parameter: $ => seq(
+      alias($.var_name, $.key),
+      ":",
+      $._parameter
+    ),
+
+    optional_keyword_parameter: $ => seq(
+      "?",
+      alias($.var_name, $.key),
+      ":",
+      $._parameter
+    ),
+
+    double_splat_parameter: $ => seq("**", $._parameter),
 
     type: $ => choice(
       $.builtin_type,

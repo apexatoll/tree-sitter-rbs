@@ -163,6 +163,25 @@
     }
   },
   {
+    "type": "double_splat_parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "extend_member",
     "named": true,
     "fields": {},
@@ -292,6 +311,34 @@
     "type": "ivar_name",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "key",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "keyword_parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "literal_type",
@@ -479,6 +526,48 @@
     }
   },
   {
+    "type": "optional_keyword_parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "optional_parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "optional_type",
     "named": true,
     "fields": {},
@@ -488,6 +577,25 @@
       "types": [
         {
           "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
           "named": true
         }
       ]
@@ -527,6 +635,25 @@
     "type": "singleton_method_name",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "splat_parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "var_name",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "string_literal",
@@ -600,6 +727,11 @@
     }
   },
   {
+    "type": "var_name",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "visibility",
     "named": true,
     "fields": {}
@@ -633,6 +765,18 @@
   },
   {
     "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "**",
+    "named": false
+  },
+  {
+    "type": ",",
     "named": false
   },
   {
