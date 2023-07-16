@@ -45,3 +45,195 @@ end
       (class_name
         (namespace
           (namespace))))))
+
+================================================================================
+Empty generic class
+================================================================================
+
+class Foo[T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (type_variable)))))
+
+================================================================================
+Empty generic class with bound type
+================================================================================
+
+class Foo[T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty covariant class
+================================================================================
+
+class Foo[out T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty contravariant class
+================================================================================
+
+class Foo[in T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty covariant class with bound type
+================================================================================
+
+class Foo[out T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty contravariant class with bound type
+================================================================================
+
+class Foo[in T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty unchecked covariant class
+================================================================================
+
+class Foo[unchecked out T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty unchecked contravariant class
+================================================================================
+
+class Foo[unchecked in T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty unchecked covariant class with bound type
+================================================================================
+
+class Foo[unchecked out T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty unchecked contravariant class with bound type
+================================================================================
+
+class Foo[unchecked in T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (class_declaration
+      (class_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))

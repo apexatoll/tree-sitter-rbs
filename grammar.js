@@ -40,7 +40,7 @@ module.exports = grammar({
     class_declaration: $ => seq(
       "class",
       $.class_name,
-      // $.module_type_parameters,
+      optional($.module_type_parameters),
       // < $.class_name $.type_arguments
       optional($.members),
       "end"
@@ -49,7 +49,7 @@ module.exports = grammar({
     module_declaration: $ => seq(
       "module",
       alias($.class_name, $.module_name),
-      // $.module_type_parameters,
+      optional($.module_type_parameters),
       // : $.module_self_types,
       optional($.members),
       "end"
@@ -58,7 +58,7 @@ module.exports = grammar({
     interface_declaration: $ => seq(
       "interface",
       $.interface_name,
-      // $.module_type_parameters,
+      optional($.module_type_parameters),
       // $.interface_members,
       "end"
     ),
@@ -66,7 +66,7 @@ module.exports = grammar({
     type_alias_declaration: $ => seq(
       "type",
       $.alias_name,
-      // $.module_type_parameters,
+      optional($.module_type_parameters),
       "=",
       $.type
     ),
@@ -83,31 +83,19 @@ module.exports = grammar({
       $.type
     ),
 
-    // module_type_parameters: $ => seq(
-    //   "[",
-    //   list1($.module_type_parameter),
-    //   "]"
-    // ),
+    module_type_parameters: $ => seq(
+      "[", 
+      optional($.unchecked),
+      optional($.variance),
+      optional(choice($.type_variable, $.bound_type)),
+      "]"
+    ),
 
-    // module_type_parameter: $ => seq(
-    //   $.generics_unchecked,
-    //   $.generics_variance,
-    //   $.type_variable,
-    //   $.generics_bound
-    // ),
+    unchecked: $ => seq("unchecked"),
 
-    // generics_bound: $ => seq(
-    //   "<", $.bound_type
-    // ),
+    variance: $ => choice("in", "out"),
 
-    // generics_variance: $ => choice(
-    //   "in",
-    //   "out"
-    // ),
-
-    // generics_unchecked: $ => seq(
-    //   "unchecked"
-    // ),
+    bound: $ => seq("<", $.bound_type),
 
     members: $ => repeat1($.member),
 
@@ -193,6 +181,8 @@ module.exports = grammar({
       optional($.namespace),
       $._constant
     ),
+
+    type_variable: $ => $._constant,
 
     interface_name: $ => seq(
       optional($.namespace),
@@ -355,6 +345,15 @@ module.exports = grammar({
       optional($.type_arguments)
     ),
 
+    bound_type: $ => seq(
+      $.type_variable,
+      "<",
+      choice(
+        $.class_singleton_type,
+        seq(choice($.class_name, $.interface_name), optional($.type_arguments))
+      )
+    ),
+
     string_literal: $ => choice(
       /'.*'/, /".*"/
     ),
@@ -404,14 +403,6 @@ module.exports = grammar({
     proc_type: $ => prec.right(
       seq("^", $.parameters, "->", $.type)
     ),
-
-    // bound_type: $ => choice(
-    //   seq(
-    //     choice($.class_name, $.interface_name),
-    //     // $.type_arguments
-    //   ),
-    //   $.class_singleton_type
-    // ),
   }
 })
 

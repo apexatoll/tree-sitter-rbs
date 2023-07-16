@@ -12,3 +12,195 @@ end
   (declaration
     (interface_declaration
       (interface_name))))
+
+================================================================================
+Empty generic interface
+================================================================================
+
+interface _Foo[T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (type_variable)))))
+
+================================================================================
+Empty generic interface with bound type
+================================================================================
+
+interface _Foo[T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty covariant interface
+================================================================================
+
+interface _Foo[out T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty contravariant interface
+================================================================================
+
+interface _Foo[in T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty covariant interface with bound type
+================================================================================
+
+interface _Foo[out T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty contravariant interface with bound type
+================================================================================
+
+interface _Foo[in T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty unchecked covariant interface
+================================================================================
+
+interface _Foo[unchecked out T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty unchecked contravariant interface
+================================================================================
+
+interface _Foo[unchecked in T]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (type_variable)))))
+
+================================================================================
+Empty unchecked covariant interface with bound type
+================================================================================
+
+interface _Foo[unchecked out T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))
+
+================================================================================
+Empty unchecked contravariant interface with bound type
+================================================================================
+
+interface _Foo[unchecked in T < String]
+
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (interface_declaration
+      (interface_name)
+      (module_type_parameters
+        (unchecked)
+        (variance)
+        (bound_type
+          (type_variable)
+          (class_name))))))

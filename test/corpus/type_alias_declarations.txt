@@ -12,3 +12,39 @@ type foobar = untyped
       (alias_name)
       (type
         (builtin_type)))))
+
+================================================================================
+Generic type alias
+================================================================================
+
+type foobar[T] = untyped
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (type_alias_declaration
+      (alias_name)
+      (module_type_parameters
+        (type_variable))
+      (type
+        (builtin_type)))))
+
+================================================================================
+Bound type alias
+================================================================================
+
+type foobar[T < String] = untyped
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (type_alias_declaration
+      (alias_name)
+      (module_type_parameters
+        (bound_type
+          (type_variable)
+          (class_name)))
+      (type
+        (builtin_type)))))

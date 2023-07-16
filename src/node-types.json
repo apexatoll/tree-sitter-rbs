@@ -89,6 +89,37 @@
     }
   },
   {
+    "type": "bound_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "class_name",
+          "named": true
+        },
+        {
+          "type": "class_singleton_type",
+          "named": true
+        },
+        {
+          "type": "interface_name",
+          "named": true
+        },
+        {
+          "type": "type_arguments",
+          "named": true
+        },
+        {
+          "type": "type_variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "builtin_type",
     "named": true,
     "fields": {}
@@ -107,6 +138,10 @@
         },
         {
           "type": "members",
+          "named": true
+        },
+        {
+          "type": "module_type_parameters",
           "named": true
         }
       ]
@@ -309,11 +344,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "interface_name",
+          "named": true
+        },
+        {
+          "type": "module_type_parameters",
           "named": true
         }
       ]
@@ -595,6 +634,10 @@
         {
           "type": "module_name",
           "named": true
+        },
+        {
+          "type": "module_type_parameters",
+          "named": true
         }
       ]
     }
@@ -628,6 +671,33 @@
       "types": [
         {
           "type": "namespace",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_type_parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "bound_type",
+          "named": true
+        },
+        {
+          "type": "type_variable",
+          "named": true
+        },
+        {
+          "type": "unchecked",
+          "named": true
+        },
+        {
+          "type": "variance",
           "named": true
         }
       ]
@@ -989,6 +1059,10 @@
           "named": true
         },
         {
+          "type": "module_type_parameters",
+          "named": true
+        },
+        {
           "type": "type",
           "named": true
         }
@@ -1011,6 +1085,16 @@
     }
   },
   {
+    "type": "type_variable",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "unchecked",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "union_type",
     "named": true,
     "fields": {},
@@ -1027,6 +1111,11 @@
   },
   {
     "type": "var_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "variance",
     "named": true,
     "fields": {}
   },
@@ -1084,6 +1173,10 @@
   },
   {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "<",
     "named": false
   },
   {
@@ -1163,6 +1256,10 @@
     "named": true
   },
   {
+    "type": "in",
+    "named": false
+  },
+  {
     "type": "include",
     "named": false
   },
@@ -1180,6 +1277,10 @@
   },
   {
     "type": "nil",
+    "named": false
+  },
+  {
+    "type": "out",
     "named": false
   },
   {
@@ -1224,6 +1325,10 @@
   },
   {
     "type": "type",
+    "named": false
+  },
+  {
+    "type": "unchecked",
     "named": false
   },
   {
