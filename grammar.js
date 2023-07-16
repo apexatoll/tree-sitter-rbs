@@ -380,7 +380,13 @@ module.exports = grammar({
     //     // $.type_arguments
     //   ),
     //   $.class_singleton_type
-    // )
+    // ),
+
+    // type_arguments: $ => seq(
+      // "[",
+      // list1($.type)
+      // "]"
+    // ),
   }
 })
 
