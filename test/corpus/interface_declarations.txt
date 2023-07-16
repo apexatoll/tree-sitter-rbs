@@ -212,8 +212,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (type
                   (builtin_type))))))))))
 

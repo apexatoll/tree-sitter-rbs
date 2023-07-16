@@ -16,8 +16,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -44,8 +44,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -75,8 +75,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -111,8 +111,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -142,8 +142,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -179,8 +179,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -188,7 +188,7 @@ end
                         (class_name)))))
                 (type
                   (builtin_type)))
-              (method_type
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -220,8 +220,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -229,7 +229,7 @@ end
                         (class_name)))))
                 (type
                   (builtin_type)))
-              (method_type
+              (signature
                 (parameters
                   (parameter
                     (type
@@ -257,8 +257,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (method_type_parameters
                   (type_variable))
                 (type
@@ -287,8 +287,8 @@ end
         (method_member
           (instance_method
             (method_name)
-            (method_types
-              (method_type
+            (method_signatures
+              (signature
                 (method_type_parameters
                   (bound_type
                     (type_variable)

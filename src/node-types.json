@@ -297,7 +297,7 @@
           "named": true
         },
         {
-          "type": "method_types",
+          "type": "method_signatures",
           "named": true
         }
       ]
@@ -589,7 +589,7 @@
     "fields": {}
   },
   {
-    "type": "method_type",
+    "type": "method_signatures",
     "named": true,
     "fields": {},
     "children": {
@@ -597,19 +597,11 @@
       "required": true,
       "types": [
         {
-          "type": "block",
+          "type": "signature",
           "named": true
         },
         {
-          "type": "method_type_parameters",
-          "named": true
-        },
-        {
-          "type": "parameters",
-          "named": true
-        },
-        {
-          "type": "type",
+          "type": "supertype",
           "named": true
         }
       ]
@@ -629,25 +621,6 @@
         },
         {
           "type": "type_variable",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "method_types",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "method_type",
-          "named": true
-        },
-        {
-          "type": "supertype",
           "named": true
         }
       ]
@@ -693,7 +666,7 @@
           "named": true
         },
         {
-          "type": "method_types",
+          "type": "method_signatures",
           "named": true
         }
       ]
@@ -1033,6 +1006,33 @@
     }
   },
   {
+    "type": "signature",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "method_type_parameters",
+          "named": true
+        },
+        {
+          "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "singleton_method",
     "named": true,
     "fields": {},
@@ -1045,7 +1045,7 @@
           "named": true
         },
         {
-          "type": "method_types",
+          "type": "method_signatures",
           "named": true
         }
       ]

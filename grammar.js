@@ -233,7 +233,7 @@ module.exports = grammar({
       "def",
       $.method_name,
       ":",
-      $.method_types
+      $.method_signatures
     ),
 
     singleton_method: $ => seq(
@@ -241,7 +241,7 @@ module.exports = grammar({
       "self.",
       $.method_name,
       ":",
-      $.method_types
+      $.method_signatures
     ),
 
     module_function: $ => seq(
@@ -249,26 +249,26 @@ module.exports = grammar({
       "self?.",
       $.method_name,
       ":",
-      $.method_types
+      $.method_signatures
     ),
 
-    method_types: $ => seq(
-      $.method_type,
-      repeat(seq("|", choice($.method_type, $.supertype)))
-    ),
-
-    method_type_parameters: $ => seq(
-      "[", list1($.type_variable, $.bound_type), "]"
+    method_signatures: $ => seq(
+      $.signature,
+      repeat(seq("|", choice($.signature, $.supertype)))
     ),
 
     // Higher precedence than union types
-    method_type: $ => prec(1, seq(
+    signature: $ => prec(1, seq(
       optional($.method_type_parameters),
       optional($.parameters),
       optional($.block),
       "->",
       $.type
     )),
+
+    method_type_parameters: $ => seq(
+      "[", list1($.type_variable, $.bound_type), "]"
+    ),
 
     block: $ => seq(
       choice("?{", "{"),
