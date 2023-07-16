@@ -147,10 +147,6 @@
         {
           "type": "superclass",
           "named": true
-        },
-        {
-          "type": "type_arguments",
-          "named": true
         }
       ]
     }
@@ -1104,11 +1100,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
-          "type": "namespace",
+          "type": "class_name",
+          "named": true
+        },
+        {
+          "type": "type_arguments",
           "named": true
         }
       ]

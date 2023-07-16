@@ -41,17 +41,9 @@ module.exports = grammar({
       "class",
       $.class_name,
       optional($.module_type_parameters),
-      optional($._superclass),
+      optional($.superclass),
       optional($.members),
       "end"
-    ),
-
-    _superclass: $ => seq(
-      seq(
-        "<",
-        alias($.class_name, $.superclass),
-        optional($.type_arguments)
-      ),
     ),
 
     module_declaration: $ => seq(
@@ -98,6 +90,12 @@ module.exports = grammar({
       alias($._global, $.global),
       ":",
       $.type
+    ),
+
+    superclass: $ => seq(
+      "<",
+      $.class_name,
+      optional($.type_arguments)
     ),
 
     module_type_parameters: $ => seq(

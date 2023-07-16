@@ -251,7 +251,8 @@ end
   (declaration
     (class_declaration
       (class_name)
-      (superclass))))
+      (superclass
+        (class_name)))))
 
 ================================================================================
 Empty class with generic superclass
@@ -267,8 +268,9 @@ end
   (declaration
     (class_declaration
       (class_name)
-      (superclass)
-      (type_arguments
-        (type
-          (namespaceable_type
-            (class_name)))))))
+      (superclass
+        (class_name)
+        (type_arguments
+          (type
+            (namespaceable_type
+              (class_name))))))))
