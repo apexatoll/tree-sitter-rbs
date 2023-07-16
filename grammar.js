@@ -87,7 +87,7 @@ module.exports = grammar({
 
     member: $ => choice(
       $.ivar_member,
-      // $.method_member,
+      $.method_member,
       $.attribute_member,
       $.include_member,
       $.extend_member,
@@ -102,13 +102,16 @@ module.exports = grammar({
       $.type
     ),
 
-    // method_member: $ => seq(
-    //   $.visibility,
-    //   "def",
-    //   $.method_name,
-    //   ":",
-    //   $.method_types
-    // ),
+    method_member: $ => choice(
+      $.module_function,
+      seq(
+        optional($.visibility),
+        choice(
+          $.instance_method,
+          $.singleton_method,
+        )
+      )
+    ),
 
     attribute_member: $ => seq(
       optional($.visibility),
@@ -190,6 +193,29 @@ module.exports = grammar({
       "attr_reader",
       "attr_writer",
       "attr_accessor"
+    ),
+
+    instance_method: $ => seq(
+      "def",
+      $.method_name,
+      ":",
+      $.method_types
+    ),
+
+    singleton_method: $ => seq(
+      "def",
+      "self.",
+      $.method_name,
+      ":",
+      $.method_types
+    ),
+
+    module_function: $ => seq(
+      "def",
+      "self?.",
+      $.method_name,
+      ":",
+      $.method_types
     ),
 
     method_types: $ => seq(

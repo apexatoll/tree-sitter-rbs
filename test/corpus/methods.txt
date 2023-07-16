@@ -1,0 +1,122 @@
+================================================================================
+Instance method definition
+================================================================================
+
+module Test
+  def foobar: -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Instance method definition with visiblity
+================================================================================
+
+module Test
+  private def foobar: -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (visibility)
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Singleton method definition
+================================================================================
+
+module Test
+  def self.foobar: -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (singleton_method
+              (method_name)
+              (method_types
+                (method_type
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Singleton method definition with visiblity
+================================================================================
+
+module Test
+  private def self.foobar: -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (visibility)
+            (singleton_method
+              (method_name)
+              (method_types
+                (method_type
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Module function definition
+================================================================================
+
+module Test
+  def self?.foobar: -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (module_function
+              (method_name)
+              (method_types
+                (method_type
+                  (type
+                    (builtin_type)))))))))))
+

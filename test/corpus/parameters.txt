@@ -1,0 +1,419 @@
+================================================================================
+Empty parameters
+================================================================================
+
+module Test
+  def foobar: () -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters)
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single required parameter
+================================================================================
+
+module Test
+  def foobar: (String) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single required parameter with alias
+================================================================================
+
+module Test
+  def foobar: (String name) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))
+                      (var_name)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single optional parameter
+================================================================================
+
+module Test
+  def foobar: (?String) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (optional_parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single optional parameter with alias
+================================================================================
+
+module Test
+  def foobar: (?String name) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (optional_parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))
+                      (var_name)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Splat parameter
+================================================================================
+
+module Test
+  def foobar: (*String) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (splat_parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Splat parameter with alias
+================================================================================
+
+module Test
+  def foobar: (*String names) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (splat_parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))
+                      (var_name)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Mixed positional parameters
+================================================================================
+
+module Test
+  def foobar: (String name, ?Integer age, *String nicknames) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))
+                      (var_name))
+                    (optional_parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))
+                      (var_name))
+                    (splat_parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))
+                      (var_name)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Required keyword parameters
+================================================================================
+
+module Test
+  def foobar: (foo: String, bar: Integer) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Optional keyword parameters
+================================================================================
+
+module Test
+  def foobar: (?foo: String, ?bar: Integer) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (optional_keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (optional_keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Double splat parameter
+================================================================================
+
+module Test
+  def foobar: (**untyped) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (double_splat_parameter
+                      (type
+                        (builtin_type))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Mixed keyword parameters
+================================================================================
+
+module Test
+  def foobar: (foo: Integer, ?bar: String, **untyped) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (optional_keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (double_splat_parameter
+                      (type
+                        (builtin_type))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Mixed parameters
+================================================================================
+
+module Test
+  def foobar: (String, foo: String, ?bar: Integer, **untyped) -> untyped
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (optional_keyword_parameter
+                      (key)
+                      (type
+                        (namespaceable_type
+                          (class_name))))
+                    (double_splat_parameter
+                      (type
+                        (builtin_type))))
+                  (type
+                    (builtin_type)))))))))))

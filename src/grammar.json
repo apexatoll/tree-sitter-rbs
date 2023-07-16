@@ -245,6 +245,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "method_member"
+        },
+        {
+          "type": "SYMBOL",
           "name": "attribute_member"
         },
         {
@@ -283,6 +287,45 @@
         {
           "type": "SYMBOL",
           "name": "type"
+        }
+      ]
+    },
+    "method_member": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "module_function"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "visibility"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "instance_method"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "singleton_method"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -614,6 +657,77 @@
         {
           "type": "STRING",
           "value": "attr_accessor"
+        }
+      ]
+    },
+    "instance_method": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "def"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_name"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_types"
+        }
+      ]
+    },
+    "singleton_method": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "def"
+        },
+        {
+          "type": "STRING",
+          "value": "self."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_name"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_types"
+        }
+      ]
+    },
+    "module_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "def"
+        },
+        {
+          "type": "STRING",
+          "value": "self?."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_name"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "method_types"
         }
       ]
     },

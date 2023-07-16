@@ -1,0 +1,247 @@
+================================================================================
+Single method type
+================================================================================
+
+module Test
+  def foobar: (String) -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single method type with required block
+================================================================================
+
+module Test
+  def foobar: (String) { -> void } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (block
+                    (type
+                      (builtin_type)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single method type with required block with parameters
+================================================================================
+
+module Test
+  def foobar: (String) { (Integer) -> void } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (block
+                    (parameters
+                      (parameter
+                        (type
+                          (namespaceable_type
+                            (class_name)))))
+                    (type
+                      (builtin_type)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single method type with optional block
+================================================================================
+
+module Test
+  def foobar: (String) ?{ -> void } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (block
+                    (type
+                      (builtin_type)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Single method type with optional block with parameters
+================================================================================
+
+module Test
+  def foobar: (String) ?{ (Integer) -> void } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (block
+                    (parameters
+                      (parameter
+                        (type
+                          (namespaceable_type
+                            (class_name)))))
+                    (type
+                      (builtin_type)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Multiple method types
+================================================================================
+
+module Test
+  def foobar: (String) -> void
+            | (Integer) { -> void } -> bool
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (block
+                    (type
+                      (builtin_type)))
+                  (type
+                    (builtin_type)))))))))))
+
+================================================================================
+Multiple method types with supertype
+================================================================================
+
+module Test
+  def foobar: (String) -> void
+            | (Integer) -> bool
+            | ...
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (declaration
+    (module_declaration
+      (module_name)
+      (members
+        (member
+          (method_member
+            (instance_method
+              (method_name)
+              (method_types
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))
+                (method_type
+                  (parameters
+                    (parameter
+                      (type
+                        (namespaceable_type
+                          (class_name)))))
+                  (type
+                    (builtin_type)))
+                (supertype)))))))))

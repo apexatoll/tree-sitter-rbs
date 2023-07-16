@@ -258,6 +258,25 @@
     }
   },
   {
+    "type": "instance_method",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "method_name",
+          "named": true
+        },
+        {
+          "type": "method_types",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "integer_literal",
     "named": true,
     "fields": {}
@@ -419,6 +438,10 @@
           "named": true
         },
         {
+          "type": "method_member",
+          "named": true
+        },
+        {
           "type": "prepend_member",
           "named": true
         },
@@ -439,6 +462,33 @@
       "types": [
         {
           "type": "member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "method_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "instance_method",
+          "named": true
+        },
+        {
+          "type": "module_function",
+          "named": true
+        },
+        {
+          "type": "singleton_method",
+          "named": true
+        },
+        {
+          "type": "visibility",
           "named": true
         }
       ]
@@ -473,6 +523,25 @@
     }
   },
   {
+    "type": "method_types",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "method_type",
+          "named": true
+        },
+        {
+          "type": "supertype",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "module_declaration",
     "named": true,
     "fields": {},
@@ -486,6 +555,25 @@
         },
         {
           "type": "module_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "method_name",
+          "named": true
+        },
+        {
+          "type": "method_types",
           "named": true
         }
       ]
@@ -709,6 +797,25 @@
     }
   },
   {
+    "type": "singleton_method",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "method_name",
+          "named": true
+        },
+        {
+          "type": "method_types",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "singleton_method_name",
     "named": true,
     "fields": {}
@@ -909,6 +1016,10 @@
     "named": true
   },
   {
+    "type": "def",
+    "named": false
+  },
+  {
     "type": "end",
     "named": false
   },
@@ -962,6 +1073,10 @@
   },
   {
     "type": "self.",
+    "named": false
+  },
+  {
+    "type": "self?.",
     "named": false
   },
   {
