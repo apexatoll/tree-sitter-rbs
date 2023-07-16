@@ -428,6 +428,10 @@
         {
           "type": "true_literal",
           "named": true
+        },
+        {
+          "type": "tuple_type",
+          "named": true
         }
       ]
     }
@@ -892,6 +896,21 @@
     "fields": {}
   },
   {
+    "type": "tuple_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "type",
     "named": true,
     "fields": {},
@@ -1023,6 +1042,14 @@
   },
   {
     "type": "?{",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
     "named": false
   },
   {
