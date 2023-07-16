@@ -7,7 +7,7 @@ type foobar = untyped
 --------------------------------------------------------------------------------
 
 (program
-  (type_alias_declaration
+  (type_alias
     (alias_name)
     (type
       (builtin_type))))
@@ -21,7 +21,7 @@ type foobar[T] = untyped
 --------------------------------------------------------------------------------
 
 (program
-  (type_alias_declaration
+  (type_alias
     (alias_name)
     (module_type_parameters
       (type_variable))
@@ -37,7 +37,7 @@ type foobar[T < String] = untyped
 --------------------------------------------------------------------------------
 
 (program
-  (type_alias_declaration
+  (type_alias
     (alias_name)
     (module_type_parameters
       (bound_type

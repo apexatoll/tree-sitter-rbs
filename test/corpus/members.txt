@@ -9,7 +9,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (ivar_member
@@ -28,7 +28,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (alias_member
@@ -46,7 +46,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (alias_member
@@ -64,7 +64,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (visibility_member
@@ -81,7 +81,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (visibility_member
@@ -98,7 +98,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -118,7 +118,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -139,7 +139,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -159,7 +159,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -179,7 +179,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -200,7 +200,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -220,7 +220,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -240,7 +240,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member
@@ -261,7 +261,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (attribute_member

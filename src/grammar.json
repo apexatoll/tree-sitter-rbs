@@ -81,20 +81,40 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "class_declaration"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "class_declaration"
+          },
+          "named": true,
+          "value": "class"
         },
         {
-          "type": "SYMBOL",
-          "name": "module_declaration"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "module_declaration"
+          },
+          "named": true,
+          "value": "module"
         },
         {
-          "type": "SYMBOL",
-          "name": "interface_declaration"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "interface_declaration"
+          },
+          "named": true,
+          "value": "interface"
         },
         {
-          "type": "SYMBOL",
-          "name": "type_alias_declaration"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "type_alias_declaration"
+          },
+          "named": true,
+          "value": "type_alias"
         },
         {
           "type": "SYMBOL",

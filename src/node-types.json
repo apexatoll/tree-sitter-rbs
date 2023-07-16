@@ -125,7 +125,7 @@
     "fields": {}
   },
   {
-    "type": "class_declaration",
+    "type": "class",
     "named": true,
     "fields": {},
     "children": {
@@ -290,7 +290,7 @@
     "fields": {}
   },
   {
-    "type": "interface_declaration",
+    "type": "interface",
     "named": true,
     "fields": {},
     "children": {
@@ -594,7 +594,7 @@
     }
   },
   {
-    "type": "module_declaration",
+    "type": "module",
     "named": true,
     "fields": {},
     "children": {
@@ -927,7 +927,7 @@
       "required": false,
       "types": [
         {
-          "type": "class_declaration",
+          "type": "class",
           "named": true
         },
         {
@@ -939,15 +939,15 @@
           "named": true
         },
         {
-          "type": "interface_declaration",
+          "type": "interface",
           "named": true
         },
         {
-          "type": "module_declaration",
+          "type": "module",
           "named": true
         },
         {
-          "type": "type_alias_declaration",
+          "type": "type_alias",
           "named": true
         }
       ]
@@ -1114,7 +1114,7 @@
     }
   },
   {
-    "type": "type_alias_declaration",
+    "type": "type_alias",
     "named": true,
     "fields": {},
     "children": {

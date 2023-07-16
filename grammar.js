@@ -31,10 +31,10 @@ module.exports = grammar({
     _variance: $ => choice("in", "out"),
 
     _declaration: $ => choice(
-      $.class_declaration,
-      $.module_declaration,
-      $.interface_declaration,
-      $.type_alias_declaration,
+      alias($.class_declaration, $.class),
+      alias($.module_declaration, $.module),
+      alias($.interface_declaration, $.interface),
+      alias($.type_alias_declaration, $.type_alias),
       $.constant_declaration,
       $.global_declaration
     ),

@@ -9,7 +9,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -26,7 +26,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -47,7 +47,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -65,7 +65,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -87,7 +87,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -104,7 +104,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -125,7 +125,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -143,7 +143,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (include_member
@@ -165,7 +165,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -182,7 +182,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -203,7 +203,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -221,7 +221,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -243,7 +243,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -260,7 +260,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -281,7 +281,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -299,7 +299,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (extend_member
@@ -321,7 +321,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (prepend_member
@@ -338,7 +338,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (prepend_member
@@ -359,7 +359,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (prepend_member
@@ -377,7 +377,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (class_declaration
+  (class
     (class_name)
     (members
       (prepend_member

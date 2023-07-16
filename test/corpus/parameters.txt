@@ -9,7 +9,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -31,7 +31,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -57,7 +57,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -84,7 +84,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -110,7 +110,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -137,7 +137,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -163,7 +163,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -190,7 +190,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -227,7 +227,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -259,7 +259,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -291,7 +291,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -316,7 +316,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method
@@ -351,7 +351,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (members
       (method

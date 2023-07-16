@@ -9,7 +9,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)))
 
 ================================================================================
@@ -23,7 +23,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name
       (namespace))))
 
@@ -38,7 +38,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name
       (namespace
         (namespace)))))
@@ -54,7 +54,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (type_variable))))
@@ -70,7 +70,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (bound_type
@@ -88,7 +88,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (variance)
@@ -105,7 +105,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (variance)
@@ -122,7 +122,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (variance)
@@ -141,7 +141,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (variance)
@@ -160,7 +160,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (unchecked)
@@ -178,7 +178,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (unchecked)
@@ -196,7 +196,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (unchecked)
@@ -216,7 +216,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_type_parameters
       (unchecked)
@@ -236,7 +236,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_reference
       (class_name)
@@ -256,7 +256,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (module_declaration
+  (module
     (module_name)
     (module_reference
       (class_name

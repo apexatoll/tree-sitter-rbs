@@ -9,7 +9,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)))
 
 ================================================================================
@@ -23,7 +23,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (type_variable))))
@@ -39,7 +39,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (bound_type
@@ -57,7 +57,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (variance)
@@ -74,7 +74,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (variance)
@@ -91,7 +91,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (variance)
@@ -110,7 +110,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (variance)
@@ -129,7 +129,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (unchecked)
@@ -147,7 +147,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (unchecked)
@@ -165,7 +165,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (unchecked)
@@ -185,7 +185,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (module_type_parameters
       (unchecked)
@@ -205,7 +205,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (interface_members
       (method
@@ -226,7 +226,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (interface_members
       (alias_member
@@ -244,7 +244,7 @@ end
 --------------------------------------------------------------------------------
 
 (program
-  (interface_declaration
+  (interface
     (interface_name)
     (interface_members
       (include_member
