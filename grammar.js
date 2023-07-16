@@ -55,15 +55,6 @@ module.exports = grammar({
       "end"
     ),
 
-    module_reference: $ => seq(":", $._module_self_types),
-
-    _module_self_types: $ => list1(
-      seq(
-        choice($.class_name, $.interface_name),
-        optional($.type_arguments),
-      )
-    ),
-
     interface_declaration: $ => seq(
       "interface",
       $.interface_name,
@@ -104,6 +95,14 @@ module.exports = grammar({
       optional($.variance),
       optional(choice($.type_variable, $.bound_type)),
       "]"
+    ),
+
+    module_reference: $ => seq(
+      ":",
+      list1(seq(
+        choice($.class_name, $.interface_name),
+        optional($.type_arguments),
+      )),
     ),
 
     unchecked: $ => seq("unchecked"),
