@@ -414,6 +414,10 @@
           "named": true
         },
         {
+          "type": "proc_type",
+          "named": true
+        },
+        {
           "type": "record_type",
           "named": true
         },
@@ -809,6 +813,25 @@
     }
   },
   {
+    "type": "proc_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "program",
     "named": true,
     "fields": {},
@@ -1050,6 +1073,10 @@
   },
   {
     "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {

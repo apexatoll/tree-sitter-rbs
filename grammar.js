@@ -336,7 +336,8 @@ module.exports = grammar({
       $.false_literal,
       $.class_singleton_type,
       $.record_type,
-      $.tuple_type
+      $.tuple_type,
+      $.proc_type
     ),
 
     operator_type: $ => choice(
@@ -395,12 +396,10 @@ module.exports = grammar({
       "[", list($.type), "]"
     ),
 
-    // proc_type: $ => seq(
-    //   "^",
-    //   $.parameters,
-    //   "->",
-    //   $.type
-    // ),
+    // Prevents conflict with union types
+    proc_type: $ => prec.right(
+      seq("^", $.parameters, "->", $.type)
+    ),
 
     // bound_type: $ => choice(
     //   seq(
