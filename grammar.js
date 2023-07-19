@@ -411,7 +411,10 @@ module.exports = grammar({
     integer_literal: $ => /[0-9][0-9_]*/,
 
     union_type: $ => prec.right(
-      seq($.type, "|", $.type)
+      choice(
+        seq($.type, "|", $.type),
+        seq("(", $.type, "|", $.type, ")")
+      )
     ),
 
     intersection_type: $ => prec.right(

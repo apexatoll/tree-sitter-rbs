@@ -104,3 +104,74 @@ end
           (signature
             (type
               (builtin_type))))))))
+
+================================================================================
+Method with bracketed union return type
+================================================================================
+
+module Test
+  def foobar: -> (String | Integer)
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (type
+              (operator_type
+                (union_type
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (type
+                    (namespaceable_type
+                      (class_name))))))))))))
+
+================================================================================
+Method with multiple signatures and bracketed union return type
+================================================================================
+
+module Test
+  def foobar: (Foo) -> (String | Integer)
+            | (Bar) -> String
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (parameters
+              (parameter
+                (type
+                  (namespaceable_type
+                    (class_name)))))
+            (type
+              (operator_type
+                (union_type
+                  (type
+                    (namespaceable_type
+                      (class_name)))
+                  (type
+                    (namespaceable_type
+                      (class_name)))))))
+          (signature
+            (parameters
+              (parameter
+                (type
+                  (namespaceable_type
+                    (class_name)))))
+            (type
+              (namespaceable_type
+                (class_name)))))))))
