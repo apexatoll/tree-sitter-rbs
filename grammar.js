@@ -146,7 +146,7 @@ module.exports = grammar({
     attribute_member: $ => seq(
       optional($.visibility),
       $.attribute_type,
-      $.method_name,
+      alias($.method_name, $.attribute_name),
       optional(seq("(", optional($.ivar_name), ")")),
       ":",
       $.type

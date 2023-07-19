@@ -42,15 +42,15 @@
       "required": true,
       "types": [
         {
+          "type": "attribute_name",
+          "named": true
+        },
+        {
           "type": "attribute_type",
           "named": true
         },
         {
           "type": "ivar_name",
-          "named": true
-        },
-        {
-          "type": "method_name",
           "named": true
         },
         {
@@ -63,6 +63,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "attribute_name",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "attribute_type",

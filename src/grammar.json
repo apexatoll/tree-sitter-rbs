@@ -692,8 +692,13 @@
           "name": "attribute_type"
         },
         {
-          "type": "SYMBOL",
-          "name": "method_name"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "method_name"
+          },
+          "named": true,
+          "value": "attribute_name"
         },
         {
           "type": "CHOICE",

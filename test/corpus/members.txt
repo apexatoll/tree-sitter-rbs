@@ -103,7 +103,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (type
           (builtin_type))))))
 
@@ -123,7 +123,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (ivar_name)
         (type
           (builtin_type))))))
@@ -144,7 +144,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (type
           (builtin_type))))))
 
@@ -164,7 +164,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (type
           (builtin_type))))))
 
@@ -184,7 +184,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (ivar_name)
         (type
           (builtin_type))))))
@@ -205,7 +205,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (type
           (builtin_type))))))
 
@@ -225,7 +225,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (type
           (builtin_type))))))
 
@@ -245,7 +245,7 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (ivar_name)
         (type
           (builtin_type))))))
@@ -266,6 +266,6 @@ end
     (members
       (attribute_member
         (attribute_type)
-        (method_name)
+        (attribute_name)
         (type
           (builtin_type))))))
