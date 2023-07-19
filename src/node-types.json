@@ -1444,6 +1444,10 @@
     "named": false
   },
   {
+    "type": "boolish",
+    "named": false
+  },
+  {
     "type": "bot",
     "named": false
   },

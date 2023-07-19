@@ -360,6 +360,7 @@ module.exports = grammar({
       "class",
       "nil",
       "bool",
+      "boolish",
       "void",
       "untyped"
     ),

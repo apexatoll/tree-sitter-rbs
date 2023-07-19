@@ -1834,6 +1834,10 @@
         },
         {
           "type": "STRING",
+          "value": "boolish"
+        },
+        {
+          "type": "STRING",
           "value": "void"
         },
         {
