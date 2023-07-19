@@ -1482,7 +1482,7 @@
             "name": "var_name"
           },
           "named": true,
-          "value": "key"
+          "value": "hash_key"
         },
         {
           "type": "STRING",
@@ -1508,7 +1508,7 @@
             "name": "var_name"
           },
           "named": true,
-          "value": "key"
+          "value": "hash_key"
         },
         {
           "type": "STRING",
@@ -1932,7 +1932,7 @@
                             "name": "var_name"
                           },
                           "named": true,
-                          "value": "key"
+                          "value": "hash_key"
                         },
                         {
                           "type": "STRING",
@@ -1968,7 +1968,7 @@
                                   "name": "var_name"
                                 },
                                 "named": true,
-                                "value": "key"
+                                "value": "hash_key"
                               },
                               {
                                 "type": "STRING",

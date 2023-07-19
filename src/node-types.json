@@ -267,6 +267,11 @@
     }
   },
   {
+    "type": "hash_key",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "include_member",
     "named": true,
     "fields": {},
@@ -407,11 +412,6 @@
     "fields": {}
   },
   {
-    "type": "key",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "keyword_parameter",
     "named": true,
     "fields": {},
@@ -420,7 +420,7 @@
       "required": true,
       "types": [
         {
-          "type": "key",
+          "type": "hash_key",
           "named": true
         },
         {
@@ -791,7 +791,7 @@
       "required": true,
       "types": [
         {
-          "type": "key",
+          "type": "hash_key",
           "named": true
         },
         {
@@ -975,7 +975,7 @@
       "required": false,
       "types": [
         {
-          "type": "key",
+          "type": "hash_key",
           "named": true
         },
         {

@@ -329,11 +329,11 @@ TEST: { foo: String, bar: Integer }
     (constant_name)
     (type
       (record_type
-        (key)
+        (hash_key)
         (type
           (namespaceable_type
             (class_name)))
-        (key)
+        (hash_key)
         (type
           (namespaceable_type
             (class_name)))))))

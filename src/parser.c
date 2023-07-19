@@ -163,7 +163,7 @@ enum {
   aux_sym_record_type_repeat1 = 144,
   alias_sym_attribute_name = 145,
   alias_sym_constant_name = 146,
-  alias_sym_key = 147,
+  alias_sym_hash_key = 147,
   alias_sym_module_name = 148,
 };
 
@@ -315,7 +315,7 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_record_type_repeat1] = "record_type_repeat1",
   [alias_sym_attribute_name] = "attribute_name",
   [alias_sym_constant_name] = "constant_name",
-  [alias_sym_key] = "key",
+  [alias_sym_hash_key] = "hash_key",
   [alias_sym_module_name] = "module_name",
 };
 
@@ -467,7 +467,7 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_record_type_repeat1] = aux_sym_record_type_repeat1,
   [alias_sym_attribute_name] = alias_sym_attribute_name,
   [alias_sym_constant_name] = alias_sym_constant_name,
-  [alias_sym_key] = alias_sym_key,
+  [alias_sym_hash_key] = alias_sym_hash_key,
   [alias_sym_module_name] = alias_sym_module_name,
 };
 
@@ -1060,7 +1060,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [alias_sym_key] = {
+  [alias_sym_hash_key] = {
     .visible = true,
     .named = true,
   },
@@ -1082,10 +1082,10 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
     [1] = alias_sym_attribute_name,
   },
   [4] = {
-    [1] = alias_sym_key,
+    [1] = alias_sym_hash_key,
   },
   [5] = {
-    [0] = alias_sym_key,
+    [0] = alias_sym_hash_key,
   },
   [6] = {
     [2] = alias_sym_attribute_name,
@@ -1095,7 +1095,7 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
 static const uint16_t ts_non_terminal_alias_map[] = {
   sym_var_name, 2,
     sym_var_name,
-    alias_sym_key,
+    alias_sym_hash_key,
   sym_method_name, 2,
     sym_method_name,
     alias_sym_attribute_name,

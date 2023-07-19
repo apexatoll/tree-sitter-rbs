@@ -236,12 +236,12 @@ end
           (signature
             (parameters
               (keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name))))
               (keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name)))))
@@ -268,12 +268,12 @@ end
           (signature
             (parameters
               (optional_keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name))))
               (optional_keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name)))))
@@ -325,12 +325,12 @@ end
           (signature
             (parameters
               (keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name))))
               (optional_keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name))))
@@ -364,12 +364,12 @@ end
                   (namespaceable_type
                     (class_name))))
               (keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name))))
               (optional_keyword_parameter
-                (key)
+                (hash_key)
                 (type
                   (namespaceable_type
                     (class_name))))

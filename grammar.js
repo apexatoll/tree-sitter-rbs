@@ -306,14 +306,14 @@ module.exports = grammar({
     splat_parameter: $ => seq("*", $._parameter),
 
     keyword_parameter: $ => seq(
-      alias($.var_name, $.key),
+      alias($.var_name, $.hash_key),
       ":",
       $._parameter
     ),
 
     optional_keyword_parameter: $ => seq(
       "?",
-      alias($.var_name, $.key),
+      alias($.var_name, $.hash_key),
       ":",
       $._parameter
     ),
@@ -410,7 +410,7 @@ module.exports = grammar({
     
     record_type: $ => seq(
       "{",
-      list(seq(alias($.var_name, $.key), ":", $.type)),
+      list(seq(alias($.var_name, $.hash_key), ":", $.type)),
       "}"
     ),
 
