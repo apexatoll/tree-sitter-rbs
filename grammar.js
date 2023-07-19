@@ -20,6 +20,20 @@ module.exports = grammar({
 
     _method: $ => /_*[A-za-z]\w*[!?]?/,
 
+    _operator_method: $ => choice(
+      "==", "===", "=~", "=>",
+      "!=", "!~", "~", 
+      "+", "+=", "-", "-=",
+      "*", "**", "**=", "*=",
+      "/", "/=", "%", "%=",
+      "<", "<<", "<<=", "<=", "<=>",
+      ">", ">=", ">>", ">>=",
+      "&", "&&", "&&=", "&=",
+      "|", "|=", "||", "||=",
+      "^", "^=",
+      "[]", "[]="
+    ),
+
     _scope: $ => seq("::"),
 
     _symbol: $ => /:@?_*[A-Za-z]\w*/,
@@ -198,7 +212,7 @@ module.exports = grammar({
 
     ivar_name: $ => $._ivar,
 
-    method_name: $ => $._method,
+    method_name: $ =>  choice($._method, $._operator_method),
 
     singleton_method_name: $ => seq(
       "self",
@@ -274,7 +288,8 @@ module.exports = grammar({
     ),
 
     block: $ => seq(
-      choice("?{", "{"),
+      optional("?"),
+      "{",
       optional($.parameters),
       "->",
       $.type,
