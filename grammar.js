@@ -119,7 +119,8 @@ module.exports = grammar({
       $.extend_member,
       $.prepend_member,
       $.alias_member,
-      $.visibility_member
+      $.visibility_member,
+      $._declaration
     ),
 
     _interface_member: $ => choice(

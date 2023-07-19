@@ -477,11 +477,27 @@
           "named": true
         },
         {
+          "type": "class",
+          "named": true
+        },
+        {
+          "type": "constant_declaration",
+          "named": true
+        },
+        {
           "type": "extend_member",
           "named": true
         },
         {
+          "type": "global_declaration",
+          "named": true
+        },
+        {
           "type": "include_member",
+          "named": true
+        },
+        {
+          "type": "interface",
           "named": true
         },
         {
@@ -490,6 +506,10 @@
         },
         {
           "type": "method",
+          "named": true
+        },
+        {
+          "type": "module",
           "named": true
         },
         {
@@ -502,6 +522,10 @@
         },
         {
           "type": "singleton_method",
+          "named": true
+        },
+        {
+          "type": "type_alias",
           "named": true
         },
         {
