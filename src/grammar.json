@@ -288,12 +288,22 @@
           "value": "type_alias"
         },
         {
-          "type": "SYMBOL",
-          "name": "constant_declaration"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "constant_declaration"
+          },
+          "named": true,
+          "value": "constant"
         },
         {
-          "type": "SYMBOL",
-          "name": "global_declaration"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "global_declaration"
+          },
+          "named": true,
+          "value": "global"
         },
         {
           "type": "ALIAS",

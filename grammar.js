@@ -51,8 +51,8 @@ module.exports = grammar({
       alias($.module_declaration, $.module),
       alias($.interface_declaration, $.interface),
       alias($.type_alias_declaration, $.type_alias),
-      $.constant_declaration,
-      $.global_declaration,
+      alias($.constant_declaration, $.constant),
+      alias($.global_declaration, $.global),
       alias($._comment, $.comment)
     ),
 

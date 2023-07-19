@@ -14,7 +14,7 @@ end
     (module_name)
     (members
       (comment)
-      (constant_declaration
+      (constant
         (constant_name)
         (type
           (namespaceable_type
@@ -34,7 +34,7 @@ end
   (module
     (module_name)
     (members
-      (constant_declaration
+      (constant
         (constant_name)
         (type
           (namespaceable_type

@@ -187,7 +187,7 @@
     }
   },
   {
-    "type": "constant_declaration",
+    "type": "constant",
     "named": true,
     "fields": {},
     "children": {
@@ -248,7 +248,7 @@
     }
   },
   {
-    "type": "global_declaration",
+    "type": "global",
     "named": true,
     "fields": {},
     "children": {
@@ -486,7 +486,7 @@
           "named": true
         },
         {
-          "type": "constant_declaration",
+          "type": "constant",
           "named": true
         },
         {
@@ -494,7 +494,7 @@
           "named": true
         },
         {
-          "type": "global_declaration",
+          "type": "global",
           "named": true
         },
         {
@@ -948,11 +948,11 @@
           "named": true
         },
         {
-          "type": "constant_declaration",
+          "type": "constant",
           "named": true
         },
         {
-          "type": "global_declaration",
+          "type": "global",
           "named": true
         },
         {
