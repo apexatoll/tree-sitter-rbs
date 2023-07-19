@@ -8,7 +8,7 @@ Foobar: untyped
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -22,12 +22,12 @@ Foo::Bar::Baz: untyped
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (symbol_literal))))
   (ERROR)
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))

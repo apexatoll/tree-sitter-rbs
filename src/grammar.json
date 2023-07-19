@@ -321,7 +321,7 @@
             "name": "_constant"
           },
           "named": true,
-          "value": "constant"
+          "value": "constant_name"
         },
         {
           "type": "STRING",

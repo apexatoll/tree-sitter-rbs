@@ -74,7 +74,7 @@ module.exports = grammar({
     ),
 
     constant_declaration: $ => seq(
-      alias($._constant, $.constant),
+      alias($._constant, $.constant_name),
       ":",
       $.type
     ),

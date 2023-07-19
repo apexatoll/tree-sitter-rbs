@@ -160,7 +160,7 @@ enum {
   aux_sym_parameters_repeat1 = 141,
   aux_sym_type_arguments_repeat1 = 142,
   aux_sym_record_type_repeat1 = 143,
-  alias_sym_constant = 144,
+  alias_sym_constant_name = 144,
   alias_sym_key = 145,
   alias_sym_module_name = 146,
 };
@@ -310,7 +310,7 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_parameters_repeat1] = "parameters_repeat1",
   [aux_sym_type_arguments_repeat1] = "type_arguments_repeat1",
   [aux_sym_record_type_repeat1] = "record_type_repeat1",
-  [alias_sym_constant] = "constant",
+  [alias_sym_constant_name] = "constant_name",
   [alias_sym_key] = "key",
   [alias_sym_module_name] = "module_name",
 };
@@ -460,7 +460,7 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_parameters_repeat1] = aux_sym_parameters_repeat1,
   [aux_sym_type_arguments_repeat1] = aux_sym_type_arguments_repeat1,
   [aux_sym_record_type_repeat1] = aux_sym_record_type_repeat1,
-  [alias_sym_constant] = alias_sym_constant,
+  [alias_sym_constant_name] = alias_sym_constant_name,
   [alias_sym_key] = alias_sym_key,
   [alias_sym_module_name] = alias_sym_module_name,
 };
@@ -1042,7 +1042,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [alias_sym_constant] = {
+  [alias_sym_constant_name] = {
     .visible = true,
     .named = true,
   },
@@ -1059,7 +1059,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
   [0] = {0},
   [1] = {
-    [0] = alias_sym_constant,
+    [0] = alias_sym_constant_name,
   },
   [2] = {
     [1] = alias_sym_module_name,

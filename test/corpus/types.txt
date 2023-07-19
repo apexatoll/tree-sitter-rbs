@@ -8,7 +8,7 @@ TEST: top
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -22,7 +22,7 @@ TEST: bot
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -36,7 +36,7 @@ TEST: self
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -50,7 +50,7 @@ TEST: instance
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -62,7 +62,7 @@ TEST: class
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -76,7 +76,7 @@ TEST: nil
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -90,7 +90,7 @@ TEST: bool
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -104,7 +104,7 @@ TEST: void
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -118,7 +118,7 @@ TEST: untyped
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (builtin_type))))
 
@@ -132,7 +132,7 @@ TEST: ""
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (string_literal)))))
@@ -147,7 +147,7 @@ TEST: "Hello world 12345"
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (string_literal)))))
@@ -162,7 +162,7 @@ TEST: ''
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (string_literal)))))
@@ -177,7 +177,7 @@ TEST: 'Hello world 12345'
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (string_literal)))))
@@ -192,7 +192,7 @@ TEST: :hello_world
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (symbol_literal)))))
@@ -207,7 +207,7 @@ TEST: :'hello_world'
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (symbol_literal)))))
@@ -222,7 +222,7 @@ TEST: :"hello_world"
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (symbol_literal)))))
@@ -237,7 +237,7 @@ TEST: 999
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (integer_literal)))))
@@ -252,7 +252,7 @@ TEST: 1_000
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (integer_literal)))))
@@ -267,7 +267,7 @@ TEST: true
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (true_literal)))))
@@ -282,7 +282,7 @@ TEST: false
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (false_literal)))))
@@ -297,7 +297,7 @@ TEST: singleton(Foobar)
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (class_singleton_type
@@ -313,7 +313,7 @@ TEST: {}
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (record_type)))))
@@ -328,7 +328,7 @@ TEST: { foo: String, bar: Integer }
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (record_type
@@ -351,7 +351,7 @@ TEST: []
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (tuple_type)))))
@@ -366,7 +366,7 @@ TEST: [String, Integer]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (tuple_type
@@ -387,7 +387,7 @@ TEST: ^() -> untyped
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (proc_type
@@ -405,7 +405,7 @@ TEST: ^(String) -> untyped
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (literal_type
         (proc_type
@@ -427,7 +427,7 @@ TEST: bool | nil
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (operator_type
         (union_type
@@ -446,7 +446,7 @@ TEST: bool | instance | nil
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (operator_type
         (union_type
@@ -470,7 +470,7 @@ TEST: bool & nil
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (operator_type
         (intersection_type
@@ -489,7 +489,7 @@ TEST: bool & instance & nil
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (operator_type
         (intersection_type
@@ -513,7 +513,7 @@ TEST: bool?
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (operator_type
         (optional_type
@@ -530,7 +530,7 @@ TEST: Foobar
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (class_name)))))
@@ -545,7 +545,7 @@ TEST: Collection[String]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (class_name)
@@ -564,7 +564,7 @@ TEST: Foobar::Baz
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (class_name
@@ -580,7 +580,7 @@ TEST: Foobar::Collection[String, Integer]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (class_name
@@ -603,7 +603,7 @@ TEST: _Foobar
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (interface_name)))))
@@ -618,7 +618,7 @@ TEST: _Foobar[T]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (interface_name)
@@ -637,7 +637,7 @@ TEST: Foobar::_Baz
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (interface_name
@@ -653,7 +653,7 @@ TEST: Foobar::_Baz[Integer]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (interface_name
@@ -673,7 +673,7 @@ TEST: foobar
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (alias_name)))))
@@ -688,7 +688,7 @@ TEST: foobar[T]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (alias_name)
@@ -707,7 +707,7 @@ TEST: Foobar::baz
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (alias_name
@@ -723,7 +723,7 @@ TEST: Foobar::baz[T]
 
 (program
   (constant_declaration
-    (constant)
+    (constant_name)
     (type
       (namespaceable_type
         (alias_name

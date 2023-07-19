@@ -190,7 +190,7 @@
       "required": true,
       "types": [
         {
-          "type": "constant",
+          "type": "constant_name",
           "named": true
         },
         {
@@ -1299,7 +1299,7 @@
     "named": false
   },
   {
-    "type": "constant",
+    "type": "constant_name",
     "named": true
   },
   {
