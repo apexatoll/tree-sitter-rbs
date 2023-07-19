@@ -945,7 +945,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "self."
+          "value": "self"
+        },
+        {
+          "type": "STRING",
+          "value": "."
         },
         {
           "type": "SYMBOL",
@@ -1080,7 +1084,11 @@
         },
         {
           "type": "STRING",
-          "value": "self."
+          "value": "self"
+        },
+        {
+          "type": "STRING",
+          "value": "."
         },
         {
           "type": "SYMBOL",
@@ -1105,7 +1113,11 @@
         },
         {
           "type": "STRING",
-          "value": "self?."
+          "value": "self?"
+        },
+        {
+          "type": "STRING",
+          "value": "."
         },
         {
           "type": "SYMBOL",

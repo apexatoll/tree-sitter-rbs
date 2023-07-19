@@ -1268,6 +1268,10 @@
     "named": false
   },
   {
+    "type": ".",
+    "named": false
+  },
+  {
     "type": ":",
     "named": false
   },
@@ -1400,11 +1404,7 @@
     "named": false
   },
   {
-    "type": "self.",
-    "named": false
-  },
-  {
-    "type": "self?.",
+    "type": "self?",
     "named": false
   },
   {

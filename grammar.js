@@ -203,7 +203,8 @@ module.exports = grammar({
     method_name: $ => $._method,
 
     singleton_method_name: $ => seq(
-      "self.",
+      "self",
+      ".",
       $._method,
     ),
 
@@ -236,7 +237,8 @@ module.exports = grammar({
 
     singleton_method: $ => seq(
       "def",
-      "self.",
+      "self",
+      ".",
       $.method_name,
       ":",
       $.method_signatures
@@ -244,7 +246,8 @@ module.exports = grammar({
 
     module_function: $ => seq(
       "def",
-      "self?.",
+      "self?",
+      ".",
       $.method_name,
       ":",
       $.method_signatures
