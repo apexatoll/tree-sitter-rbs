@@ -20,7 +20,7 @@ module.exports = grammar({
 
     _method: $ => /_*[A-za-z]\w*[!?]?/,
 
-    _scope: $ => token("::"),
+    _scope: $ => seq("::"),
 
     _symbol: $ => /:@?_*[A-Za-z]\w*/,
 

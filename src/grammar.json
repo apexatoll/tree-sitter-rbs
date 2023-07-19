@@ -41,11 +41,13 @@
       "value": "_*[A-za-z]\\w*[!?]?"
     },
     "_scope": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": "::"
-      }
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "::"
+        }
+      ]
     },
     "_symbol": {
       "type": "PATTERN",
