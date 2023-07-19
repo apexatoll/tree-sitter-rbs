@@ -325,6 +325,10 @@ module.exports = grammar({
       $.literal_type,
       $.operator_type,
       $.namespaceable_type,
+      $.class_singleton_type,
+      $.record_type,
+      $.tuple_type,
+      $.proc_type
     ),
 
     builtin_type: $ => choice(
@@ -344,11 +348,7 @@ module.exports = grammar({
       $.symbol_literal,
       $.integer_literal,
       $.true_literal,
-      $.false_literal,
-      $.class_singleton_type,
-      $.record_type,
-      $.tuple_type,
-      $.proc_type
+      $.false_literal
     ),
 
     operator_type: $ => choice(

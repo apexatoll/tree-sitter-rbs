@@ -299,9 +299,8 @@ TEST: singleton(Foobar)
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (class_singleton_type
-          (class_name))))))
+      (class_singleton_type
+        (class_name)))))
 
 ================================================================================
 Empty record type
@@ -315,8 +314,7 @@ TEST: {}
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (record_type)))))
+      (record_type))))
 
 ================================================================================
 Record type
@@ -330,16 +328,15 @@ TEST: { foo: String, bar: Integer }
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (record_type
-          (key)
-          (type
-            (namespaceable_type
-              (class_name)))
-          (key)
-          (type
-            (namespaceable_type
-              (class_name))))))))
+      (record_type
+        (key)
+        (type
+          (namespaceable_type
+            (class_name)))
+        (key)
+        (type
+          (namespaceable_type
+            (class_name)))))))
 
 ================================================================================
 Empty tuple type
@@ -353,8 +350,7 @@ TEST: []
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (tuple_type)))))
+      (tuple_type))))
 
 ================================================================================
 Tuple type
@@ -368,14 +364,13 @@ TEST: [String, Integer]
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (tuple_type
-          (type
-            (namespaceable_type
-              (class_name)))
-          (type
-            (namespaceable_type
-              (class_name))))))))
+      (tuple_type
+        (type
+          (namespaceable_type
+            (class_name)))
+        (type
+          (namespaceable_type
+            (class_name)))))))
 
 ================================================================================
 Proc type with no parameters
@@ -389,11 +384,10 @@ TEST: ^() -> untyped
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (proc_type
-          (parameters)
-          (type
-            (builtin_type)))))))
+      (proc_type
+        (parameters)
+        (type
+          (builtin_type))))))
 
 ================================================================================
 Proc type with parameters
@@ -407,15 +401,14 @@ TEST: ^(String) -> untyped
   (constant_declaration
     (constant_name)
     (type
-      (literal_type
-        (proc_type
-          (parameters
-            (parameter
-              (type
-                (namespaceable_type
-                  (class_name)))))
-          (type
-            (builtin_type)))))))
+      (proc_type
+        (parameters
+          (parameter
+            (type
+              (namespaceable_type
+                (class_name)))))
+        (type
+          (builtin_type))))))
 
 ================================================================================
 Single union

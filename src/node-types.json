@@ -438,23 +438,11 @@
       "required": true,
       "types": [
         {
-          "type": "class_singleton_type",
-          "named": true
-        },
-        {
           "type": "false_literal",
           "named": true
         },
         {
           "type": "integer_literal",
-          "named": true
-        },
-        {
-          "type": "proc_type",
-          "named": true
-        },
-        {
-          "type": "record_type",
           "named": true
         },
         {
@@ -467,10 +455,6 @@
         },
         {
           "type": "true_literal",
-          "named": true
-        },
-        {
-          "type": "tuple_type",
           "named": true
         }
       ]
@@ -1099,6 +1083,10 @@
           "named": true
         },
         {
+          "type": "class_singleton_type",
+          "named": true
+        },
+        {
           "type": "literal_type",
           "named": true
         },
@@ -1108,6 +1096,18 @@
         },
         {
           "type": "operator_type",
+          "named": true
+        },
+        {
+          "type": "proc_type",
+          "named": true
+        },
+        {
+          "type": "record_type",
+          "named": true
+        },
+        {
+          "type": "tuple_type",
           "named": true
         }
       ]

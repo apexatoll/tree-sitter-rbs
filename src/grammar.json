@@ -1576,6 +1576,22 @@
         {
           "type": "SYMBOL",
           "name": "namespaceable_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "class_singleton_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tuple_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "proc_type"
         }
       ]
     },
@@ -1642,22 +1658,6 @@
         {
           "type": "SYMBOL",
           "name": "false_literal"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "class_singleton_type"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "record_type"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "tuple_type"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "proc_type"
         }
       ]
     },
