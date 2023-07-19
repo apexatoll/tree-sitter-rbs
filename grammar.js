@@ -221,9 +221,11 @@ module.exports = grammar({
       $._interface
     ),
 
-    namespace: $ => choice(
-      $._scope,
-      seq(optional($.namespace), $._constant, $._scope)
+    namespace: $ => prec.right(
+      choice(
+        $._scope,
+        seq(optional($.namespace), $._constant, $._scope)
+      )
     ),
 
     method: $ => seq(
@@ -362,6 +364,7 @@ module.exports = grammar({
     ),
 
     namespaceable_type: $ => seq(
+      optional($._scope),
       choice($.class_name, $.interface_name, $.alias_name),
       optional($.type_arguments)
     ),
