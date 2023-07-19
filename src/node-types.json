@@ -251,7 +251,7 @@
       "required": true,
       "types": [
         {
-          "type": "global",
+          "type": "global_name",
           "named": true
         },
         {
@@ -1319,7 +1319,7 @@
     "named": true
   },
   {
-    "type": "global",
+    "type": "global_name",
     "named": true
   },
   {

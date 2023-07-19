@@ -343,7 +343,7 @@
             "name": "_global"
           },
           "named": true,
-          "value": "global"
+          "value": "global_name"
         },
         {
           "type": "STRING",

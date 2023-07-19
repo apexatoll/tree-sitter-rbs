@@ -8,7 +8,7 @@ $foobar: untyped
 
 (program
   (global_declaration
-    (global)
+    (global_name)
     (type
       (builtin_type))))
 
@@ -22,6 +22,6 @@ $FOOBAR: untyped
 
 (program
   (global_declaration
-    (global)
+    (global_name)
     (type
       (builtin_type))))

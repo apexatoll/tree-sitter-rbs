@@ -80,7 +80,7 @@ module.exports = grammar({
     ),
     
     global_declaration: $ => seq(
-      alias($._global, $.global),
+      alias($._global, $.global_name),
       ":",
       $.type
     ),
