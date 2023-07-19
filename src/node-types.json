@@ -349,10 +349,6 @@
         {
           "type": "singleton_method",
           "named": true
-        },
-        {
-          "type": "visibility",
-          "named": true
         }
       ]
     }
@@ -534,10 +530,6 @@
           "named": true
         },
         {
-          "type": "visibility",
-          "named": true
-        },
-        {
           "type": "visibility_member",
           "named": true
         }
@@ -558,6 +550,10 @@
         },
         {
           "type": "method_signatures",
+          "named": true
+        },
+        {
+          "type": "visibility",
           "named": true
         }
       ]
@@ -1026,6 +1022,10 @@
         },
         {
           "type": "method_signatures",
+          "named": true
+        },
+        {
+          "type": "visibility",
           "named": true
         }
       ]

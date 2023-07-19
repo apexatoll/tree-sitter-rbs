@@ -136,10 +136,8 @@ module.exports = grammar({
     ),
 
     _method_member: $ => choice(
-      seq(
-        optional($.visibility),
-        choice($.method, $.singleton_method)
-      ),
+      $.method,
+      $.singleton_method,
       $.module_function
     ),
 
@@ -229,6 +227,7 @@ module.exports = grammar({
     ),
 
     method: $ => seq(
+      optional($.visibility),
       "def",
       $.method_name,
       ":",
@@ -236,6 +235,7 @@ module.exports = grammar({
     ),
 
     singleton_method: $ => seq(
+      optional($.visibility),
       "def",
       "self",
       ".",
