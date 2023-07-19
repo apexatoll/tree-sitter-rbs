@@ -482,6 +482,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "constant_declaration",
           "named": true
         },
@@ -937,6 +941,10 @@
       "types": [
         {
           "type": "class",
+          "named": true
+        },
+        {
+          "type": "comment",
           "named": true
         },
         {
@@ -1454,6 +1462,10 @@
   {
     "type": "class",
     "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
   },
   {
     "type": "constant_name",

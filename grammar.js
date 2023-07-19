@@ -6,6 +6,8 @@ module.exports = grammar({
 
     _alias: $ => /[a-z]\w*/,
 
+    _comment: $ => /#.*\n/,
+
     _constant: $ => /[A-Z]\w*/,
 
     _delimited_symbol: $ => /:["']@?_*[A-Za-z]\w*["']/,
@@ -50,7 +52,8 @@ module.exports = grammar({
       alias($.interface_declaration, $.interface),
       alias($.type_alias_declaration, $.type_alias),
       $.constant_declaration,
-      $.global_declaration
+      $.global_declaration,
+      alias($._comment, $.comment)
     ),
 
     class_declaration: $ => seq(

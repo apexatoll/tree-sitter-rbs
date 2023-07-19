@@ -1,0 +1,42 @@
+================================================================================
+Comment
+================================================================================
+
+module Test
+  # This is a comment
+  FOO: Bar
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (comment)
+      (constant_declaration
+        (constant_name)
+        (type
+          (namespaceable_type
+            (class_name)))))))
+
+================================================================================
+Inline comment
+================================================================================
+
+module Test
+  FOO: Bar # This is an inline comment
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (constant_declaration
+        (constant_name)
+        (type
+          (namespaceable_type
+            (class_name))))
+      (comment))))

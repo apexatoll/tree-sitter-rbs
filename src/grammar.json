@@ -12,6 +12,10 @@
       "type": "PATTERN",
       "value": "[a-z]\\w*"
     },
+    "_comment": {
+      "type": "PATTERN",
+      "value": "#.*\\n"
+    },
     "_constant": {
       "type": "PATTERN",
       "value": "[A-Z]\\w*"
@@ -290,6 +294,15 @@
         {
           "type": "SYMBOL",
           "name": "global_declaration"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_comment"
+          },
+          "named": true,
+          "value": "comment"
         }
       ]
     },
