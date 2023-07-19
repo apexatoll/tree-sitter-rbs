@@ -1632,13 +1632,8 @@
           "name": "symbol_literal"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_integer"
-          },
-          "named": true,
-          "value": "integer_literal"
+          "type": "SYMBOL",
+          "name": "integer_literal"
         },
         {
           "type": "SYMBOL",
@@ -1782,6 +1777,10 @@
         }
       ]
     },
+    "integer_literal": {
+      "type": "PATTERN",
+      "value": "[0-9][0-9_]*"
+    },
     "symbol_literal": {
       "type": "CHOICE",
       "members": [
@@ -1808,10 +1807,6 @@
         "type": "STRING",
         "value": "false"
       }
-    },
-    "integer_literal": {
-      "type": "PATTERN",
-      "value": "[0-9][0-9_]*"
     },
     "union_type": {
       "type": "PREC_RIGHT",

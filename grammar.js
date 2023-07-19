@@ -342,7 +342,7 @@ module.exports = grammar({
     literal_type: $ => choice(
       $.string_literal,
       $.symbol_literal,
-      alias($._integer, $.integer_literal),
+      $.integer_literal,
       $.true_literal,
       $.false_literal,
       $.class_singleton_type,
@@ -374,6 +374,8 @@ module.exports = grammar({
     string_literal: $ => choice(
       /'.*'/, /".*"/
     ),
+
+    integer_literal: $ => $._integer,
 
     symbol_literal: $ => choice(
       $._symbol,
