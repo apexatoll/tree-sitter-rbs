@@ -2183,7 +2183,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "singleton("
+          "value": "singleton"
+        },
+        {
+          "type": "STRING",
+          "value": "("
         },
         {
           "type": "SYMBOL",

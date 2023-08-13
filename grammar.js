@@ -435,7 +435,7 @@ module.exports = grammar({
     ),
 
     class_singleton_type: $ => seq(
-      "singleton(", $.class_name, ")",
+      "singleton", "(", $.class_name, ")",
     ),
     
     record_type: $ => seq(
