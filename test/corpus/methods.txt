@@ -175,3 +175,149 @@ end
             (type
               (namespaceable_type
                 (class_name)))))))))
+
+================================================================================
+Method with block
+================================================================================
+
+module Test
+  def foobar: { -> void } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (block
+              (type
+                (builtin_type)))
+            (type
+              (builtin_type))))))))
+
+================================================================================
+Method with optional block
+================================================================================
+
+module Test
+  def foobar: ?{ -> String } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (block
+              (type
+                (namespaceable_type
+                  (class_name))))
+            (type
+              (builtin_type))))))))
+
+================================================================================
+Method with block and parameters
+================================================================================
+
+module Test
+  def foobar: (Foo) { (bool) -> void } -> String
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (parameters
+              (parameter
+                (type
+                  (namespaceable_type
+                    (class_name)))))
+            (block
+              (parameters
+                (parameter
+                  (type
+                    (builtin_type))))
+              (type
+                (builtin_type)))
+            (type
+              (namespaceable_type
+                (class_name)))))))))
+
+================================================================================
+Method with optional block and parameters
+================================================================================
+
+module Test
+  def foobar: ?{ -> String } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (block
+              (type
+                (namespaceable_type
+                  (class_name))))
+            (type
+              (builtin_type))))))))
+
+================================================================================
+Method with block, parameters and self reference
+================================================================================
+
+module Test
+  def foobar: (Integer) { (String) [self: String] -> void } -> void
+end
+
+--------------------------------------------------------------------------------
+
+(program
+  (module
+    (module_name)
+    (members
+      (method
+        (method_name)
+        (method_signatures
+          (signature
+            (parameters
+              (parameter
+                (type
+                  (namespaceable_type
+                    (class_name)))))
+            (block
+              (parameters
+                (parameter
+                  (type
+                    (namespaceable_type
+                      (class_name)))))
+              (self_reference
+                (type
+                  (namespaceable_type
+                    (class_name))))
+              (type
+                (builtin_type)))
+            (type
+              (builtin_type))))))))

@@ -87,6 +87,10 @@
           "named": true
         },
         {
+          "type": "self_reference",
+          "named": true
+        },
+        {
           "type": "type",
           "named": true
         }
@@ -982,6 +986,21 @@
           "type": "hash_key",
           "named": true
         },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "self_reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
         {
           "type": "type",
           "named": true

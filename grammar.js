@@ -294,6 +294,7 @@ module.exports = grammar({
       optional("?"),
       "{",
       optional($.parameters),
+      optional($.self_reference),
       "->",
       $.type,
       "}",
@@ -342,6 +343,10 @@ module.exports = grammar({
 
     type_arguments: $ => seq(
       "[", list1($.type), "]"
+    ),
+
+    self_reference: $ => seq(
+      "[", "self", ":", $.type, "]"
     ),
 
     type: $ => choice(
