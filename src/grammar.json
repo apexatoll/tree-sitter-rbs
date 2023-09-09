@@ -757,6 +757,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "singleton_ivar_member"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_method_member"
         },
         {
@@ -809,6 +813,31 @@
     "ivar_member": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ivar_name"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type"
+        }
+      ]
+    },
+    "singleton_ivar_member": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "self"
+        },
+        {
+          "type": "STRING",
+          "value": "."
+        },
         {
           "type": "SYMBOL",
           "name": "ivar_name"

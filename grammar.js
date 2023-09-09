@@ -130,6 +130,7 @@ module.exports = grammar({
 
     _member: $ => choice(
       $.ivar_member,
+      $.singleton_ivar_member,
       $._method_member,
       $.attribute_member,
       $.include_member,
@@ -147,6 +148,14 @@ module.exports = grammar({
     ),
 
     ivar_member: $ => seq(
+      $.ivar_name,
+      ":",
+      $.type
+    ),
+
+    singleton_ivar_member: $ => seq(
+      "self",
+      ".",
       $.ivar_name,
       ":",
       $.type

@@ -530,6 +530,10 @@
           "named": true
         },
         {
+          "type": "singleton_ivar_member",
+          "named": true
+        },
+        {
           "type": "singleton_method",
           "named": true
         },
@@ -1026,6 +1030,25 @@
         },
         {
           "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "singleton_ivar_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ivar_name",
           "named": true
         },
         {
